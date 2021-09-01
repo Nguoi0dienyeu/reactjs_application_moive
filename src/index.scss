@@ -1,0 +1,187 @@
+
+.App {
+	@media screen and (max-width: 1200px) {
+		overflow: hidden;
+		.header {
+			.nav {
+				margin: 20px 20px 0 20px;
+				#nav-second {
+						display: block;
+						position: absolute;
+						background: #282828;
+						overflow: hidden;
+						visibility: hidden;
+						z-index: 1000;
+						opacity: 90%;
+						padding-bottom: 30px;
+						top: 0;
+						left: 0;	
+					ul.first-menu {
+						margin-right: 100px;
+						li {
+							cursor: pointer;
+							padding: 0;
+							a{
+								display: block;
+								color: white;
+								letter-spacing: 2px;
+							}	
+						}
+					}
+				}
+				.menu-mobile{
+					display: block;
+					.text-w3 {
+						font-size: 35px;
+					}
+				}
+			}
+			div#search-nor {
+				padding: 0 5px 0 5px;
+				.row {
+					text-align: center;
+				}
+			}
+		}
+		.header .nav #nav-second.mobile.active {
+		visibility: visible;
+		}
+
+		.tv-show {
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: -10px;
+			margin-right: -10px;
+			.row {
+				width: auto;
+				max-width: 100%;
+				padding: 10px;
+			}
+		}
+
+	}
+	@media screen and (max-width: 992px) {
+		.container {
+			margin: 5px;
+			.watch button:hover, .watch button:focus {
+				background: #ff9900;
+				transition: 0.2s;
+			}
+		}
+		.tv-show {
+			.title-tv {
+				margin: 10px;
+			}
+			.row {
+				padding: 0;
+				margin-bottom: 20px;
+			}
+		}
+
+		div#search-nor {
+			img {
+				width: 100%;
+				margin-left: -10px;
+			}
+			.row {
+				text-align: center;
+				.search-second input {
+					padding: 0;
+					text-align: center;
+				}
+			}
+		}
+		div.fot-container {
+			.socials {
+				margin-left: 50px;
+				div.confirm {
+					input {
+						width:120px;
+					}
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 768px) {
+		.container {
+			.content-film {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				.watch {
+					margin:20px; 
+					border: 1px solid #ff9900;
+					img {
+						padding-top: 10px;
+					}
+					.btn-w-f button .content-w:hover {
+						transition: 0.1s;
+					}
+				}
+			}
+		}
+		.tv-show {
+				display: flex;
+				justify-content: space-around;
+		}
+
+		.header #search-nor {
+			display: block;
+		.row-right {
+			text-align: center;
+			margin-top: 50px;
+			img {
+				width: 90%;
+				margin: auto;
+				}
+			}
+		}
+		.fot-container {
+			flex-wrap: wrap;
+			.left-fot {
+				padding-left: 70px;
+			}
+			.center-fot {
+				margin-right: 70px;
+			}
+			.socials {
+				margin: 0 0 5rem 5.5rem;
+			}
+			.confirm {
+				input {
+					width: auto;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 552px) {
+		#site-footer {
+			text-align: center;
+			.fot-container {
+				div.socials {
+					.link {
+						justify-content: center;
+					}
+					.confirm {
+						input {
+							width: auto;
+						}
+					}
+				}
+				.left-fot {
+					margin-left: 50px;
+				}
+				.center-fot {
+					padding-left: 50px;
+				}
+			.confirm {
+				input {
+					width: 150px;
+					}
+				}
+			}
+		}
+	}
+}
+
