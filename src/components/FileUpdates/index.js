@@ -5,11 +5,6 @@ function FileUpdates() {
 const [data,setData] = useState([]);
 
   useEffect(() => {
-  	const newdata  = [...data];
-  	newdata.splice(4,20);
-  	setData(newdata);
-		console.log("newdata",newdata);
-
     const fetchData = async () =>  {
       const result = await axios.get (
         'https://api.themoviedb.org/3/movie/now_playing?api_key=e7d1a25f4b340e09aa16db0f949d2a5e',
@@ -18,6 +13,11 @@ const [data,setData] = useState([]);
       console.log("Data",data);
     }
     fetchData();
+
+  const newdata = [...data];
+  newdata.splice(4,20);
+  setData(newdata);
+  console.log("Neadata:",newdata[3]);
   },[]);
 
 	return (
