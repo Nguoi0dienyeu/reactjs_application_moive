@@ -7,9 +7,9 @@ function TvShow() {
 			<div className = "fot-container">
 				<div className = "left-fot">
 					<img src="image/logo512.png" alt="logo footer"/>
-					<p className = "address">9067 Zurich, Switzerland 87</p>
-					<p className = "address">abc@gmail.com</p>
-					<p className = "address">0974280876</p>
+					<p className = "address">Addr: 9067 Zurich, Switzerland 87</p>
+					<p className = "address">Email: abc@gmail.com</p>
+					<p className = "address">Call: 0974280876</p>
 				</div>
 				<div className = "center-fot">
 					<h1>Custom Services</h1>
@@ -20,7 +20,7 @@ function TvShow() {
 					</ul>
 				</div>
 				<div className ="socials">
-					<h1>Socials</h1>
+					<h1>Contact Us</h1>
 					<div className = "link">
 						<label className = "link-font"><a href="">f</a></label>
 						<label className = "link-font"><a href="">i</a></label>

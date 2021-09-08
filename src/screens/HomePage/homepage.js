@@ -1,6 +1,6 @@
 import React from 'react';
 import Navigations from 'components/Navigations/header.js';
-import FileUpdates from 'components/FileUpdates/index.js';
+import FilmsUpdate from 'components/FilmsUpdate/index.js';
 import SearchMovies from 'components/SearchMovies/index.js';
 import TvShow from 'components/TvShow/index.js';
 import Footer from 'components/Footer/index.js';
@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
  function SimpleSlider() {
+
   var settings = {
     dots: true,
     infinite: true,
@@ -20,13 +21,13 @@ import Slider from "react-slick";
   return (
     <Slider {...settings}>
       <div>
-        <img className = "img-slick" src="image/qc.jpg" alt=""/>
+        <img className = "img-slick" src="https://www.themoviedb.org/t/p/w1920_and_h600_multi_faces_filter(duotone,032541,01b4e4)/rCxdJkk5PMCWIzRWcpqIxUaWnf1.jpg" alt="Watch If?"/>
       </div>
       <div>
-       <img className = "img-slick" src="image/qc.jpg" alt=""/>
+       <img className = "img-slick" src="https://www.themoviedb.org/t/p/w1066_and_h600_bestv2/gFZriCkpJYsApPZEF3jhxL4yLzG.jpg" alt=""/>
       </div>
       <div>
-        <img className = "img-slick" src="image/qc.jpg" alt=""/>
+        <img className = "img-slick" src="https://www.themoviedb.org/t/p/w1066_and_h600_bestv2/aT0XL7YLDx9GfpU2q8kgWUtn0on.jpg" alt=""/>
       </div>
     </Slider>
   );
@@ -38,7 +39,7 @@ export default function HomePage() {
 		<div className = "header">
 			<Navigations/>
 			<SimpleSlider/>
-      <FileUpdates/>
+      <FilmsUpdate/>
       <SearchMovies/>
       <TvShow/>
 		</div>
@@ -48,4 +49,5 @@ export default function HomePage() {
     </>
 	);
 }
+
 
