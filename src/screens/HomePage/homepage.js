@@ -4,7 +4,6 @@ import FilmsUpdate from 'components/FilmsUpdate/index.js';
 import SearchMovies from 'components/SearchMovies/index.js';
 import TvShow from 'components/TvShow/index.js';
 import Footer from 'components/Footer/index.js';
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";

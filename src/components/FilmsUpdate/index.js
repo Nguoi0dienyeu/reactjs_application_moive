@@ -22,7 +22,7 @@ function FilmsUpdate() {
 				<div className="title">
 					<p className="title-left">Film Update</p>
 					<p className="title-right">
-						<Link to = "/showmore"><a href="">Show More....</a></Link>
+						<Link to = "/showmore"><a href="">Show More...</a></Link>
 					</p>
 				</div>
 				<Switch>
@@ -59,7 +59,7 @@ function FilmsUpdate() {
 }
 
 function ShowMore() {
-		return <h1>Hihi</h1>;
+		return <h1>Show tv</h1>;
 	}
 
 
