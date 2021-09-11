@@ -71,15 +71,15 @@ const useStyles = makeStyles((theme) => ({
 
 function ShowMore() {
   const [data, setData] = useState([]);   
-  const [page,setPage] = useState([]);
-  const [isloading,setIsloading] = useState ();
+  const [itemPerPage,setItemPerPage] = useState ([16]);
+  const [page,setPage] = useState([1]);
   const classes = useStyles();
-  const [currentpage, setCurrentpage] = React.useState(1);
+
   const handleChange = (event, value) => {
     setPage(value);
-    setIsloading(true);
-    console.log(isloading);    
+    console.log("Item",itemPerPage);
   };
+
   useEffect(() => {
     const fetchData = async () => {
       const list = await axios.get(
@@ -87,11 +87,10 @@ function ShowMore() {
       );
       const removed = list.data.results.splice(0, 4);
       setData(list.data.results);
-      console.log('data', list.data);
+      console.log("List data:",list.data.results);
     };
     fetchData();
   }, []);
-
   return (
     <div id="container">
       <div className="top-movies">
@@ -116,7 +115,11 @@ function ShowMore() {
           ))}
           <div className={classes.root}>
             <Typography>Page: {page}</Typography>
-           <Pagination count={70} page={page} onChange={handleChange} />
+           <Pagination 
+             count={75} page={page} 
+             onChange={handleChange} 
+             itemPerPage = {16}
+           />
           </div>
         </div>
       </div>
