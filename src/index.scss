@@ -65,9 +65,9 @@
 				width: auto;
 				max-width: 100%;
 				padding: 10px;
-				 img {
-				 	background: blue;
-				 }
+				img {
+					background: blue;
+				}
 			}
 		}
 	}
@@ -128,6 +128,15 @@
 					}
 					.btn-w-f button .content-w:hover {
 						transition: 0.1s;
+					}
+				}
+			}
+		}
+		#container {
+			.top-movies {
+				.content-film {
+					.film {
+						width: 170px;
 					}
 				}
 			}

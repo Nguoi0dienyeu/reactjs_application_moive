@@ -105,7 +105,7 @@ body {
 
 		div#search-nor select.year:hover,
 		div#search-nor select.action:hover {
-			border: 1px solid orange;
+			border: 1px solid #ff9900;
 			transition: 0.5s;
 		}
 
@@ -217,7 +217,7 @@ body {
 	}
 
 	.row .title a:hover {
-		color: orange;
+		color: #ff9900;
 		transition: 0.3s;
 	}
 
@@ -248,7 +248,7 @@ body {
 			display: flex;
 			.watch button:hover,
 			.watch button:focus {
-				background: orange;
+				background: #ff9900;
 				transition: 0.4s;
 			}
 			.watch img:hover {
@@ -256,7 +256,7 @@ body {
 				opacity: 70%;
 				transition: 0.5s;
 				.btn-w-f {
-					visibility:hidden;
+					visibility: hidden;
 				}
 			}
 			.watch {
@@ -306,7 +306,54 @@ body {
 			}
 		}
 	}
-
+	// showmore film
+	#container {
+		.top-movies {
+			text-align: center;
+			margin: 70px 0 70px 0;
+			.content-film {
+				display: flex;
+				justify-content: space-around;
+				align-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+				margin-top: 70px;
+				.film {
+					width: 290px;
+					padding-bottom: 20px;
+					img {
+						width: 100%;
+					}
+					.sub-title p a:hover {
+						color: #ff9900;
+					}
+					.sub-title {
+						text-decoration: none;
+						text-align: left;
+						p.date {
+							font-size: 15px;
+							font-weight: 400;
+							font-style: italic;
+						}
+						p {
+							font-size: 20px;
+							color: #663300;
+							font-weight: 700;
+							a {
+								color: #663300;
+							}
+						}
+					}
+				}
+			}
+			h1 {
+				color: #ff9900;
+				letter-spacing: 1px;
+				font-weight: 600;
+			}
+		}
+	}
+	// endshowmore film
 	#site-footer {
 		background: url(footer_bg.png) no-repeat;
 		min-height: 310px;
@@ -331,7 +378,7 @@ body {
 
 			.center-fot {
 				.three-menu li a:hover {
-					color: orange;
+					color: #ff9900;
 					transition: 0.4s;
 				}
 
@@ -373,7 +420,7 @@ body {
 					}
 
 					label {
-						background: orange;
+						background: #ff9900;
 						padding: 20px;
 
 						a {
@@ -384,13 +431,13 @@ body {
 
 				.confirm:hover,
 				.confirm:focus {
-					border: 1px solid orange;
+					border: 1px solid #ff9900;
 					border-right: none;
 					transition: 0.4s;
 				}
 
 				.link label:hover {
-					background: orange;
+					background: #ff9900;
 					transition: 0.4s;
 				}
 
