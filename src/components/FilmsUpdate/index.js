@@ -71,26 +71,39 @@ const useStyles = makeStyles((theme) => ({
 
 function ShowMore() {
   const [data, setData] = useState([]);   
-  const [itemPerPage,setItemPerPage] = useState ([16]);
-  const [page,setPage] = useState([1]);
+  const [page,setPage] = useState(1);
+  const [newpage, setNewpage] =useState();
   const classes = useStyles();
 
-  const handleChange = (event, value) => {
-    setPage(value);
-    console.log("Item",itemPerPage);
-  };
-
-  useEffect(() => {
+useEffect(() => {
     const fetchData = async () => {
       const list = await axios.get(
         'https://api.themoviedb.org/3/movie/now_playing?api_key=e7d1a25f4b340e09aa16db0f949d2a5e'
       );
       const removed = list.data.results.splice(0, 4);
       setData(list.data.results);
-      console.log("List data:",list.data.results);
+      console.log("Data list api page first:",list.data.results);
     };
     fetchData();
-  }, []);
+  }, [page]);
+
+  const handleChange = (event, value) => {
+    setPage(value);
+    console.log("Item",itemPerPage);
+  };
+    setNewpage(value);
+  }
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const list = await axios.get(
+        'https://api.themoviedb.org/3/movie/now_playing?api_key=e7d1a25f4b340e09aa16db0f949d2a5e'
+      );
+      setData(list.data.results);
+      console.log("Data list new page:",list.data.results);
+    };
+    fetchData();
+  }, [newpage]);
   return (
     <div id="container">
       <div className="top-movies">
@@ -118,7 +131,6 @@ function ShowMore() {
            <Pagination 
              count={75} page={page} 
              onChange={handleChange} 
-             itemPerPage = {16}
            />
           </div>
         </div>
