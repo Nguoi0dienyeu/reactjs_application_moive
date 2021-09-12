@@ -86,11 +86,10 @@ useEffect(() => {
     };
     fetchData();
   }, [page]);
+console.log("useEffect1:");
 
   const handleChange = (event, value) => {
     setPage(value);
-    console.log("Item",itemPerPage);
-  };
     setNewpage(value);
   }
 
@@ -104,6 +103,8 @@ useEffect(() => {
     };
     fetchData();
   }, [newpage]);
+console.log("useEffect2:");
+
   return (
     <div id="container">
       <div className="top-movies">
