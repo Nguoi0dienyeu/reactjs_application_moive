@@ -318,9 +318,15 @@ body {
 				align-items: center;
 				flex-wrap: wrap;
 				margin-top: 70px;
+				.film img:hover ,.film img:focus {
+					opacity: 60%;
+					transition: 0.3s;
+				}
 				.film {
 					width: 290px;
 					padding-bottom: 20px;
+					cursor: pointer;
+					height: 580px;
 					img {
 						width: 100%;
 					}
@@ -344,6 +350,22 @@ body {
 							}
 						}
 					}
+				}
+			}
+			.makeStyles-root-1 {
+				display: flex;
+				justify-content: center;
+				align-content: center;
+				align-items: center;
+				button.MuiButtonBase-root.MuiPaginationItem-root.MuiPaginationItem-page.Mui-selected {
+					background: rgb(255, 204, 0);
+				}
+				.MuiPaginationItem-root {
+					font-size: 17px;
+					margin: 0 7px;
+				}
+				.MuiPaginationItem-icon {
+					font-size: 2.25rem;
 				}
 			}
 			h1 {

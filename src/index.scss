@@ -52,10 +52,26 @@
 				}
 			}
 		}
+		// showmore
+		#container {
+			.top-movies {
+				.content-film {
+					.film {
+						width: 17.33%;
+						height: 420px;
+						img  {
+							width: 100%;
+						}
+					}
+				}
+				.makeStyles-root-1 {
+					margin-top: 30px;
+				}
+			}
+		}
 		.header .nav #nav-second.mobile.active {
 			visibility: visible;
 		}
-
 		.tv-show {
 			display: flex;
 			flex-wrap: wrap;
@@ -132,11 +148,13 @@
 				}
 			}
 		}
+		// showmore
 		#container {
 			.top-movies {
 				.content-film {
 					.film {
 						width: 170px;
+						height: 400px;
 					}
 				}
 			}

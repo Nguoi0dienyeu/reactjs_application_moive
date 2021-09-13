@@ -70,31 +70,33 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function ShowMore() {
-  const [data, setData] = useState([]);   
-  const [page,setPage] = useState(1);
+  const [data, setData] = useState([]);
+  const [page, setPage] = useState(1);
   const classes = useStyles();
 
-
-  const handleChange = (event, value) => {
-    setPage(value);
-    const newvalue = (event) =>{
-      setPage(newvalue);
-    }
-  }
-
- useEffect(() => {
+  useEffect(() => {
     const fetchData = async () => {
       const list = await axios.get(
         'https://api.themoviedb.org/3/movie/now_playing?api_key=e7d1a25f4b340e09aa16db0f949d2a5e'
       );
-      const removed = list.data.results.splice(0, 4);
       setData(list.data.results);
-      console.log("Data list new page:",list.data.results);
+    };
+    fetchData();
+  }, []);
+
+  const handleChange = (event, value) => {
+    setPage(value);
+  };
+  useEffect(() => {
+    const fetchData = async () => {
+      const list = await axios.get(
+        `https://api.themoviedb.org/3/movie/now_playing?api_key=e7d1a25f4b340e09aa16db0f949d2a5e&page=${page}`
+      );
+      setData(list.data.results);
     };
     fetchData();
   }, [page]);
- console.log("useEffect 1",page);
- 
+
   return (
     <div id="container">
       <div className="top-movies">
@@ -117,13 +119,9 @@ function ShowMore() {
               </div>
             </div>
           ))}
-          <div className={classes.root}>
-            <Typography>Page: {page}</Typography>
-           <Pagination 
-             count={75} page={page} 
-             onChange={handleChange} 
-           />
-          </div>
+        </div>
+        <div className={classes.root}>
+          <Pagination count={75} page={page} onChange={handleChange} />
         </div>
       </div>
     </div>
