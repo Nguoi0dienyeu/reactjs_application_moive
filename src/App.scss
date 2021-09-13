@@ -306,11 +306,42 @@ body {
 			}
 		}
 	}
-	// showmore film
+	// showmore film and showmore tv 
+	// title same
 	#container {
 		.top-movies {
 			text-align: center;
 			margin: 70px 0 70px 0;
+			.watch-tv {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-top: 50px;
+				flex-wrap: wrap;
+				.row-tv a:hover {
+					color: orange;
+					transition: 0.3s;
+				}
+				.row-tv img:hover {
+					opacity: 70%;
+					transition: 0.3s;
+				}
+				.row-tv {
+					width: 230px;
+					min-height: 465px;
+					cursor: pointer;
+					.title {
+						font-size: 18px;
+						font-weight: 600;
+						font-style: normal;
+					}
+					img {
+						width: 100%;
+						border: 1px solid #d9d9d9;
+						border-radius: 20px;
+					}
+				}
+			}
 			.content-film {
 				display: flex;
 				justify-content: space-around;
@@ -318,7 +349,8 @@ body {
 				align-items: center;
 				flex-wrap: wrap;
 				margin-top: 70px;
-				.film img:hover ,.film img:focus {
+				.film img:hover,
+				.film img:focus {
 					opacity: 60%;
 					transition: 0.3s;
 				}
@@ -365,7 +397,7 @@ body {
 					margin: 0 7px;
 				}
 				.MuiPaginationItem-icon {
-					font-size: 2.25rem;
+					font-size: 2.75rem;
 				}
 			}
 			h1 {

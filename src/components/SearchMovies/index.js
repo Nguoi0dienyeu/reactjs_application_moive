@@ -5,6 +5,7 @@ function SearchMovies() {
 		<Router>
 			<Switch>
 				<Route path="/showmore"></Route>
+				<Route path="/showmoretv"></Route>
 				<div id="search-nor">
 					<div className="row">
 						<p className="title">Searching Now</p>

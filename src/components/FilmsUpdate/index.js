@@ -24,6 +24,8 @@ function FilmsUpdate() {
           <Route path="/showmore">
             <ShowMore />
           </Route>
+          <Route path = "/showmoretv">
+          </Route>
           <div className="container">
             <div className="title">
               <p className="title-left">Film Update</p>
@@ -121,7 +123,7 @@ function ShowMore() {
           ))}
         </div>
         <div className={classes.root}>
-          <Pagination count={75} page={page} onChange={handleChange} />
+          <Pagination count={70} page={page} onChange={handleChange} />
         </div>
       </div>
     </div>
