@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Video from 'simple-react-video-thumbnail';
 function capture() {
 	var video = document.getElementById('video');
 }
@@ -27,7 +26,6 @@ function Details() {
 					<video
 						id="video"
 						width ="1200"
-						img = "100%"
 						height = "500"
 						src="http://www.w3schools.com/html/mov_bbb.mp4"
 						type="video/mp4"
