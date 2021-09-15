@@ -225,9 +225,19 @@ body {
 		opacity: 70%;
 		transition: 0.5s;
 	}
+	// detail film update
+	.detail-container {
+		.content{
+			.title {
+				display: flex;
+			}
+			#video {
+				border: 1px solid gray;
+			}
+		}
+	}
 	.container {
 		margin-top: 70px;
-
 		.title {
 			display: flex;
 			justify-content: space-between;

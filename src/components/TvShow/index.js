@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import axios from 'axios';
 import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
 import Pagination from '@material-ui/lab/Pagination';
 
 export default function TvShow() {
@@ -21,18 +20,16 @@ export default function TvShow() {
 		<>
 			<Router>
 				<Switch>
-					<Route path="/showmore">
-					</Route>
+					<Route path="/showmore"></Route>
 					<Route path="/showmoretv">
 						<ShowmoreTv />
 					</Route>
+					<Route path="/detail"></Route>
 					<div className="tv">
 						<div className="title-tv">
 							<p className="title-left">tv show</p>
 							<p className="title-right">
-								<Link to="/showmoretv">
-									<a href="">all tv show >> </a>
-								</Link>
+									<a href="/showmoretv">all tv show >> </a>
 							</p>
 						</div>
 						<div className="tv-show">
@@ -44,7 +41,7 @@ export default function TvShow() {
 										alt="tvshow"
 									/>
 									<p className="title">
-										<a href="">{items.name}</a>
+										<a href="/">{items.name}</a>
 									</p>
 									<p clas="title2">
 										{new Date(items.first_air_date).getFullYear()}

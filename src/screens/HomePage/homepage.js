@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Navigations from 'components/Navigations/header.js';
 import FilmsUpdate from 'components/FilmsUpdate/index.js';
 import SearchMovies from 'components/SearchMovies/index.js';
@@ -7,6 +8,8 @@ import Footer from 'components/Footer/index.js';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Slider from 'react-slick';
+
+
 
 function SimpleSlider() {
   var settings = {
@@ -17,6 +20,9 @@ function SimpleSlider() {
     slidesToScroll: 1,
   };
   return (
+    <Router>
+    <Switch>
+    <Route path="/detail"></Route>
     <Slider {...settings}>
       <div>
         <img
@@ -40,6 +46,8 @@ function SimpleSlider() {
         />
       </div>
     </Slider>
+    </Switch>
+    </Router>
   );
 }
 
