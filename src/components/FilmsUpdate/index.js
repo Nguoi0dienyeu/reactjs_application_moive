@@ -126,7 +126,7 @@ function ShowMore() {
           ))}
         </div>
         <div className={classes.root}>
-          <Pagination count={70} page={page} onChange={handleChange} />
+          <Pagination count={80} page={page} onChange={handleChange} />
         </div>
       </div>
     </div>
