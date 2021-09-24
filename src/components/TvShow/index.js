@@ -24,12 +24,12 @@ export default function TvShow() {
 					<Route path="/showmoretv">
 						<ShowmoreTv />
 					</Route>
-					<Route path="/detail"></Route>
+					<Route path="/details"></Route>
 					<div className="tv">
 						<div className="title-tv">
 							<p className="title-left">tv show</p>
 							<p className="title-right">
-									<a href="/showmoretv">all tv show >> </a>
+								<a href="/showmoretv">all tv show >> </a>
 							</p>
 						</div>
 						<div className="tv-show">

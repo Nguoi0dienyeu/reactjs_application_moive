@@ -22,7 +22,7 @@ function SimpleSlider() {
   return (
     <Router>
     <Switch>
-    <Route path="/detail"></Route>
+    <Route path="/details"></Route>
     <Slider {...settings}>
       <div>
         <img

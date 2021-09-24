@@ -6,7 +6,7 @@ function SearchMovies() {
 			<Switch>
 				<Route path="/showmore"></Route>
 				<Route path="/showmoretv"></Route>
-				<Route path="/detail"></Route>
+				<Route path="/details"></Route>
 				<div id="search-nor">
 					<div className="row">
 						<p className="title">Searching Now</p>
