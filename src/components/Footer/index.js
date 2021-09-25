@@ -14,21 +14,21 @@ function TvShow() {
 				<div className = "center-fot">
 					<h1>Custom Services</h1>
 					<ul className = "three-menu">
-						<li><a href="">Home</a></li>
-						<li><a href="">Watch Online</a></li>
-						<li><a href="">Tv Show</a></li>
+						<li><a href="/">Home</a></li>
+						<li><a href="/">Watch Online</a></li>
+						<li><a href="/">Tv Show</a></li>
 					</ul>
 				</div>
 				<div className ="socials">
 					<h1>Contact Us</h1>
 					<div className = "link">
-						<label className = "link-font"><a href="">f</a></label>
-						<label className = "link-font"><a href="">i</a></label>
-						<label className = "link-font"><a href="">t</a></label>
+						<label className = "link-font"><a href="/">f</a></label>
+						<label className = "link-font"><a href="/">i</a></label>
+						<label className = "link-font"><a href="/">t</a></label>
 					</div>
 					<div className ="confirm">
 						<input className ="email-con" type="text" placeholder = "Your Email Address" name = "email" required/>
-						<label className = "email-font" type  ="submit" ><a href="">Send</a></label>
+						<label className = "email-font" type  ="submit" ><a href="/">Send</a></label>
 					</div>
 				</div>
 			</div>

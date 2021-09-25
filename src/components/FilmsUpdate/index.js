@@ -18,9 +18,10 @@ function FilmsUpdate() {
       const result = await axios.get(
         'https://api.themoviedb.org/3/movie/now_playing?api_key=e7d1a25f4b340e09aa16db0f949d2a5e'
       );
-      const items = result.data.results.splice(4, 20);
+      const removed = result.data.results.splice(4, 20);
       setData(result.data.results);
-      console.log('Data HomePage FIlm update', result.data);
+      console.log("Data fetch API Themoviedb:",result.data.results);
+      console.log("Data Remove HomePage:",removed);
     };
     fetchData();
   }, []);
@@ -29,15 +30,15 @@ function FilmsUpdate() {
     <>
       <Router>
       <Switch>
-        <Route path="/showmore">
+        <Route path="/movie">
           <ShowMore />
         </Route>
-        <Route path="/showmoretv"></Route>
+        <Route path="/tvshow"></Route>
         <div className="container">
           <div className="title">
             <p className="title-left">Film Update</p>
             <p className="title-right">
-              <Link to="/showmore"> Show More...</Link>
+              <a href="/movie"> Show More...</a>
             </p>
           </div>
           <div className="content">

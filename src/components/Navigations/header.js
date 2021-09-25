@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { useDetectOutsideClick } from 'components/Navigations/useDetectOutsideClick.js';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import HomePage from 'screens/HomePage/homepage.js';
+import { BrowserRouter as Router,Switch, Link } from 'react-router-dom';
 
 function Navigations() {
 	const imageEL = useRef(null);
@@ -10,6 +9,7 @@ function Navigations() {
 	return (
 		<>
 			<Router>
+			<Switch>
 					<div className="nav">
 						<Link to="/">
 							<img src="logo512.png" alt="lgoo" />
@@ -24,13 +24,13 @@ function Navigations() {
 									<a href="/">Home</a>
 								</li>
 								<li>
-									<a href="">Favourtis</a>
+									<a href="/">Favourtis</a>
 								</li>
 								<li>
-									<a href="/showmoretv">Tv Show</a>
+									<a href="/tvshow">Tv Show</a>
 								</li>
 								<li>
-									<a href="">Watch Online</a>
+									<a href="/">Watch Online</a>
 								</li>
 							</ul>
 							<input className="box-search" placeholder="Movie Searching.." />
@@ -41,6 +41,7 @@ function Navigations() {
 							</button>
 						</div>
 					</div>
+				</Switch>
 			</Router>
 		</>
 	);

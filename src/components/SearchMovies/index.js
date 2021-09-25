@@ -4,8 +4,8 @@ function SearchMovies() {
 	return (
 		<Router>
 			<Switch>
-				<Route path="/showmore"></Route>
-				<Route path="/showmoretv"></Route>
+				<Route path="/movie"></Route>
+				<Route path="/tvshow"></Route>
 				<Route path="/details"></Route>
 				<div id="search-nor">
 					<div className="row">
