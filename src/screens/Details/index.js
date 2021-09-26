@@ -1,4 +1,5 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
+import axios from 'axios';
 import {
 	BrowserRouter as Router,
 	Switch,
@@ -28,7 +29,7 @@ function Movies() {
 	return (
 		<div>
 			<h2>Watching Trailer newst</h2>
-			<Link to={`${url}/12345`}>Rending Detail </Link>
+			<Link to={`${url}/12345`}>Rending Detail</Link>
 			<Switch>
 				<Route path={`${path}/:showid`}>
 					<MoviesID />
