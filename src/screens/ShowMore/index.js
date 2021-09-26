@@ -19,7 +19,7 @@ function ShowMore() {
   useEffect(() => {
     const fetchData = async () => {
       const list = await axios.get(
-        '/movie/now_playing?api_key=e7d1a25f4b340e09aa16db0f949d2a5e'
+        '/movie/now_playing?'
       );
       setData(list.data.results);
       setTotalpage(list.data.total_pages);
@@ -35,7 +35,7 @@ function ShowMore() {
   useEffect(() => {
     const fetchData = async () => {
       const list = await axios.get(
-        `/movie/now_playing?api_key=e7d1a25f4b340e09aa16db0f949d2a5e&page=${page}`
+        `/movie/now_playing?&page=${page}`
       );
       setData(list.data.results);
     };

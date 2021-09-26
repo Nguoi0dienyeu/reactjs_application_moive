@@ -8,7 +8,7 @@ export default function TvShow() {
 	useEffect(() => {
 		const fetchData = async () => {
 			const result = await axios.get(
-				'/tv/popular?api_key=e7d1a25f4b340e09aa16db0f949d2a5e&language=en-US'
+				'/tv/popular?'
 			);
 			const removed = result.data.results.splice(6, 20);
 			setData(result.data.results);

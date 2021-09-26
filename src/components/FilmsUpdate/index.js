@@ -13,7 +13,7 @@ function FilmsUpdate() {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios.get(
-        'movie/now_playing?api_key=e7d1a25f4b340e09aa16db0f949d2a5e'
+        'movie/now_playing?'
       );
       const removed = result.data.results.splice(4, 20);
       setData(result.data.results);
