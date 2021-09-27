@@ -1,12 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch} from 'react-router-dom';
 function SearchMovies() {
 	return (
 		<Router>
-			<Switch>
-				<Route path="/movie"></Route>
-				<Route path="/tvshow"></Route>
-				<Route path="/details"></Route>
+		<Switch>
 				<div id="search-nor">
 					<div className="row">
 						<p className="title">Searching Now</p>
@@ -68,7 +65,7 @@ function SearchMovies() {
 						</div>
 					</div>
 				</div>
-			</Switch>
+				</Switch>
 		</Router>
 	);
 }

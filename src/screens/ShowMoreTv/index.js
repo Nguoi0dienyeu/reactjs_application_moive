@@ -19,7 +19,7 @@ function ShowmoreTv() {
 	useEffect(() => {
 		const fetchData = async () => {
 			const tvlist = await axios.get(
-				'/tv/popular?api_key=e7d1a25f4b340e09aa16db0f949d2a5e&language=en-US'
+				'/tv/popular?'
 			);
 			setData(tvlist.data.results);
 			setTotalpage(tvlist.data.total_pages);
@@ -34,7 +34,7 @@ function ShowmoreTv() {
   useEffect(() => {
 		const fetchData = async () => {
 			const tvlist = await axios.get(
-				`/tv/popular?api_key=e7d1a25f4b340e09aa16db0f949d2a5e&language=en-US&page=${page}`
+				`/tv/popular?&page=${page}`
 			);
 			setData(tvlist.data.results);
 			console.log('List Data tvshow:', tvlist.data.results);

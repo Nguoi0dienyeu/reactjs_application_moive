@@ -20,16 +20,14 @@ export default function TvShow() {
 		<>
 			<Router>
 				<Switch>
-					<Route path="/movie"></Route>
-					<Route path="/tvshow">
-						<ShowMoreTv />
-					</Route>
-					<Route path="/details"></Route>
+				<Route path="/tvshow">
+					<ShowMoreTv/>
+				</Route>
 					<div className="tv">
 						<div className="title-tv">
 							<p className="title-left">tv show</p>
 							<p className="title-right">
-								<a href="/tvshow">all tv show >> </a>
+								<Link to="/tvshow">all tv show >> </Link>
 							</p>
 						</div>
 						<div className="tv-show">
