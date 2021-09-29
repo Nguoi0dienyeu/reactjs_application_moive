@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ShowMore from 'screens/ShowMore/index.js';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import Details from 'screens/Details/index.js';
 
 function FilmsUpdate() {
   const [data, setData] = useState([]);
@@ -15,16 +15,11 @@ function FilmsUpdate() {
   }, []);
 
   return (
-    <>
-    <Router>
-      <Route path="/movie">
-        <ShowMore />
-      </Route>
       <div className="container">
         <div className="title">
           <p className="title-left">Film Update</p>
           <p className="title-right">
-            <Link to="/movie"> Show More...</Link>
+            <a href="/movie"> Show More...</a>
           </p>
         </div>
         <div className="content">
@@ -43,7 +38,7 @@ function FilmsUpdate() {
                 </div>
                 <div className="sub-title">
                   <p>
-                    <Link to={`/movie/${items.id}`}>{items.title}</Link>
+                    <a href={`/movie/${items.id}`}>{items.title}</a>
                   </p>
                   <p>Year: {new Date(items.release_date).getFullYear()}</p>
                 </div>
@@ -52,8 +47,6 @@ function FilmsUpdate() {
           </div>
         </div>
       </div>
-      </Router>
-    </>
   );
 }
 export default FilmsUpdate;

@@ -227,13 +227,26 @@ body {
 		transition: 0.5s;
 	}
 	// detail film update
-	.detail-container {
-		.content{
+	.main-video {
+		.video{
 			.title {
 				display: flex;
 			}
-			#video {
-				border: 1px solid gray;
+			img {
+				width: 100%;
+			}
+		}
+		.info {
+			.sub-info {
+				background: gray;
+				p{
+					color: #ffffff;
+					padding: 10px;
+				}
+				 label {
+					color: orange;
+					margin-left: 10px;
+				}
 			}
 		}
 	}

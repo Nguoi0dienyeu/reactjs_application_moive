@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
 import Navigations from 'components/Navigations/header.js';
 import FilmsUpdate from 'components/FilmsUpdate/index.js';
 import SearchMovies from 'components/SearchMovies/index.js';
@@ -47,16 +46,15 @@ function SimpleSlider() {
 export default function HomePage() {
   return (
     <>
-      <Router>
-        <div className="container-flud">
-          <Navigations />
-          <SimpleSlider />
-            <FilmsUpdate />
-            <SearchMovies />
-            <TvShow />
-        </div>
-        <Footer />
-      </Router>
+      <div className="container-flud">
+        <Navigations />
+        <SimpleSlider />
+        <FilmsUpdate />
+        <SearchMovies />
+        <TvShow />
+      {/**/}
+      </div>
+      <Footer />
     </>
   );
 }

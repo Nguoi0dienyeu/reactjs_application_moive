@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import {
 	BrowserRouter as Router,
@@ -10,36 +10,23 @@ import {
 } from 'react-router-dom';
 export default function Details() {
 	return (
-		<>
-		<Router>
-			<Switch>
-				<Route path="/detail">
-					<Movies />
-				</Route>
-			</Switch>
-		</Router>
-		</>
-	);
-}
-
-function Movies() {
-	let { path, url } = useRouteMatch();
-	console.log("Params: path:",path);
-	console.log("Params: Url:",url);
-	return (
-		<div>
-			<h2>Watching Trailer newst</h2>
-			<Link to={`${url}/12345`}>Rending Detail</Link>
-			<Switch>
-				<Route path={`${path}/:showid`}>
-					<MoviesID />
-				</Route>
-			</Switch>
+		<div className="main-video">
+			<div className="video">
+				<div className="title">
+					<h1>Watching</h1>
+				</div>
+				<img src="https://www.themoviedb.org/t/p/original/6s1KfGZINuUoIgWyeVT2ehxUrvP.jpg" alt="sang-chi"/>
+				<div className="info">
+					<div className="sub-info">
+						<p>Title Film:<label>Shang-Chi and the Legend of the Ten Rings</label></p>
+						<p>Actor:<label>Destin Daniel Cretton, David Callaham</label></p>
+						<p>Director:<label>Destin Daniel Cretton</label></p>
+						<p>Gener:<label>Action</label></p>
+						<p>Release year: <label>September 2021</label></p>
+						<p>IMDB rating:<label>8.5</label></p>
+					</div>
+				</div>
+			</div>
 		</div>
 	);
-}
-
-function MoviesID() {
-	let { showid } = useParams();
-	return <h3>{showid}</h3>;
 }
