@@ -1,6 +1,6 @@
 import React  from 'react';
 
-function TvShow() {
+function Footer() {
 
 	return (
 		<footer id = "site-footer">
@@ -39,4 +39,4 @@ function TvShow() {
 		</footer>
 	);
 }
-export  default TvShow;
+export  default Footer;

@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { useDetectOutsideClick } from 'components/Navigations/useDetectOutsideClick.js';
+
 function Navigations() {
 	const imageEL = useRef(null);
 	const [isActive, setIsActive] = useDetectOutsideClick(imageEL, true);
