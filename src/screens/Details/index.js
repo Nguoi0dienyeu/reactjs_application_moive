@@ -1,13 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import {
-	BrowserRouter as Router,
-	Switch,
-	Route,
-	Link,
-	useParams,
-	useRouteMatch,
-} from 'react-router-dom';
+import React from 'react';
 export default function Details() {
 	return (
 		<div className="main-video">

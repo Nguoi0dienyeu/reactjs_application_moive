@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import ShowMore from 'screens/ShowMore/index.js';
-import Details from 'screens/Details/index.js';
 
 function FilmsUpdate() {
   const [data, setData] = useState([]);

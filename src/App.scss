@@ -4,31 +4,27 @@ body {
 	padding: 0;
 
 	.App {
+		max-width: 1200px;
+		margin: auto;
 		.container-flud {
 			max-width: 1200px;
 			margin: auto;
-
 		}
-
 		ul li {
 			list-style-type: none;
 		}
-
 		a {
 			text-decoration: none;
 			color: #333300;
 		}
-
 		.nav {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-
 			#nav-second {
 				display: flex;
 				justify-content: center;
 				align-items: center;
-
 				.first-menu {
 					margin-right: 200px;
 				}
@@ -228,7 +224,7 @@ body {
 	}
 	// detail film update
 	.main-video {
-		.video{
+		.video {
 			.title {
 				display: flex;
 			}
@@ -239,11 +235,11 @@ body {
 		.info {
 			.sub-info {
 				background: gray;
-				p{
+				p {
 					color: #ffffff;
 					padding: 10px;
 				}
-				 label {
+				label {
 					color: orange;
 					margin-left: 10px;
 				}
@@ -330,7 +326,7 @@ body {
 			}
 		}
 	}
-	// showmore film and showmore tv 
+	// showmore film and showmore tv
 	// title same
 	#container {
 		.top-movies {

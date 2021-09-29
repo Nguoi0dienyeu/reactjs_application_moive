@@ -1,6 +1,4 @@
 import React from 'react';
-import ShowMore from 'screens/ShowMore/index.js';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 function SearchMovies() {
 	return (
 			<div id="search-nor">
