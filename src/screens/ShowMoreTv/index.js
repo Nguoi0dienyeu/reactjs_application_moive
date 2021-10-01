@@ -51,13 +51,15 @@ function ShowmoreTv() {
 							<div className="watch-tv">
 								{data.map((items, index) => (
 									<div className="row-tv" key={index}>
+										<a href={`/detail/${items.id}`}>
 										<img
 											className="img-tv"
 											src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${items.poster_path}`}
 											alt="tvshow"
 										/>
+										</a>
 										<p className="title">
-											<a href={`/movie/${items.id}`}>{items.name}</a>
+											<a href={`/detail/${items.id}`}>{items.name}</a>
 										</p>
 										<p clas="title2">
 											{new Date(items.first_air_date).getFullYear()}

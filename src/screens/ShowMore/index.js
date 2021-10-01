@@ -50,7 +50,7 @@ function ShowMore() {
             <div className="content-film">
               {data.map((items, index) => (
                 <div className="film" key={index}>
-                  <a href={`/showmore/${items.id}`}>
+                  <a href={`/detail/${items.id}`}>
                     <img
                       src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${items.poster_path}`}
                       alt="film update"
@@ -58,7 +58,7 @@ function ShowMore() {
                   </a>
                   <div className="sub-title">
                     <p>
-                      <a href={`/showmore/${items.id}`}>{items.title}</a>
+                      <a href={`/detail/${items.id}`}>{items.title}</a>
                     </p>
                     <p className="date">
                       {new Date(items.release_date).getUTCFullYear()}
