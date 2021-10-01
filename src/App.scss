@@ -327,6 +327,9 @@ body {
 	// showmore film and showmore tv
 	// title same
 	#container {
+		a {
+			text-decoration: none;
+		}
 		.top-movies {
 			text-align: center;
 			margin: 70px 0 70px 0;

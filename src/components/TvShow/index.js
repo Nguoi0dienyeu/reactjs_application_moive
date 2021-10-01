@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import ShowMoreTv from 'screens/ShowMoreTv/index.js';
-
 export default function TvShow() {
 	const [data, setData] = useState([]);
 	useEffect(() => {
@@ -25,11 +23,13 @@ export default function TvShow() {
 				<div className="tv-show">
 					{data.map((items, index) => (
 						<div className="row" key={index}>
+							<a href={`/movie/${items.id}`}>
 							<img
 								className="img-tv"
 								src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${items.poster_path}`}
 								alt="tvshow"
 							/>
+							</a>
 							<p className="title">
 								<a href={`/movie/${items.id}`}>{items.name}</a>
 							</p>
