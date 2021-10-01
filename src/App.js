@@ -17,7 +17,7 @@ export default function App() {
         <Route path="/showmore">
           <ShowMore />
         </Route>
-        <Route path="/detail">
+        <Route path="/detail/:id">
           <Details />
         </Route>
         <Route path="/tvshow">

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import {BrowserRouter as Router,Link} from 'react-router-dom';
 import Navigations from 'components/Navigations/header.js';
 import Footer from 'components/Footer/';
 import { makeStyles } from '@material-ui/core/styles';
@@ -35,7 +36,6 @@ function ShowmoreTv() {
 		const fetchData = async () => {
 			const tvlist = await axios.get(`/tv/popular?&page=${page}`);
 			setData(tvlist.data.results);
-			console.log('List Data tvshow:', tvlist.data.results);
 		};
 		fetchData();
 	}, [page]);
@@ -51,15 +51,15 @@ function ShowmoreTv() {
 							<div className="watch-tv">
 								{data.map((items, index) => (
 									<div className="row-tv" key={index}>
-										<a href={`/detail/${items.id}`}>
+										<Link to={`/detail/${items.id}`}>
 										<img
 											className="img-tv"
 											src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${items.poster_path}`}
 											alt="tvshow"
 										/>
-										</a>
+										</Link>
 										<p className="title">
-											<a href={`/detail/${items.id}`}>{items.name}</a>
+											<Link to={`/detail/${items.id}`}>{items.name}</Link>
 										</p>
 										<p clas="title2">
 											{new Date(items.first_air_date).getFullYear()}

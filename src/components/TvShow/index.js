@@ -18,21 +18,21 @@ export default function TvShow() {
 				<div className="title-tv">
 					<p className="title-left">tv show</p>
 					<p className="title-right">
-						<Link to="/tvshow">all tv show >> </Link>
+						<Link to="/tvshow">all tv show</Link>
 					</p>
 				</div>
 				<div className="tv-show">
 					{data.map((items, index) => (
 						<div className="row" key={index}>
-							<a href={`/tvshow/${items.id}`}>
+							<Link to={`/detail/${items.id}`}>
 							<img
 								className="img-tv"
 								src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${items.poster_path}`}
 								alt="tvshow"
 							/>
-							</a>
+							</Link>
 							<p className="title">
-								<a href={`/tvshow/${items.id}`}>{items.name}</a>
+								<Link to={`/detail/${items.id}`}>{items.name}</Link>
 							</p>
 							<p clas="title2">
 								{new Date(items.first_air_date).getFullYear()}

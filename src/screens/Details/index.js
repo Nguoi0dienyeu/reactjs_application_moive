@@ -1,7 +1,10 @@
 import React from 'react';
+import { BrowserRouter as Router,useParams } from 'react-router-dom';
 import Navigations from 'components/Navigations/header.js';
 import Footer from 'components/Footer';
 export default function Details() {
+	let {id} = useParams();
+	console.log("useParams ID:",id);
 	return (
 		<div className="App">
 			<div className="container-flud">

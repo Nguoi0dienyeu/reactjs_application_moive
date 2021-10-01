@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import Navigations from 'components/Navigations/header.js';
 import Footer from 'components/Footer/';
 import { makeStyles } from '@material-ui/core/styles';
@@ -12,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-function ShowMore() {
+export default function ShowMore() {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
   const [totalpage, setTotalpage] = useState();
@@ -50,15 +51,15 @@ function ShowMore() {
             <div className="content-film">
               {data.map((items, index) => (
                 <div className="film" key={index}>
-                  <a href={`/detail/${items.id}`}>
+                  <Link to={`/detail/${items.id}`}>
                     <img
                       src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${items.poster_path}`}
                       alt="film update"
                     />
-                  </a>
+                  </Link>
                   <div className="sub-title">
                     <p>
-                      <a href={`/detail/${items.id}`}>{items.title}</a>
+                      <Link to={`/detail/${items.id}`}>{items.title}</Link>
                     </p>
                     <p className="date">
                       {new Date(items.release_date).getUTCFullYear()}
@@ -81,4 +82,3 @@ function ShowMore() {
     </div>
   );
 }
-export default ShowMore;
