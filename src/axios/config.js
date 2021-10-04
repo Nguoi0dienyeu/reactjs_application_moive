@@ -2,7 +2,6 @@ import axios from 'axios';
 
 axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 
-
 axios.interceptors.request.use(function (config) {
 	// DO somthing with request sent
 	if (!config.params) {
@@ -14,4 +13,4 @@ axios.interceptors.request.use(function (config) {
 	// Do something request error
 	return Promise.reject(error);
 });
-console.log("-> Config Axios apikey");
+console.log("-> Config Axios youtube");

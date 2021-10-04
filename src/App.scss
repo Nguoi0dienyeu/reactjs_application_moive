@@ -30,7 +30,6 @@ body {
 
 			.menu-mobile {
 				display: none;
-
 				button {
 					border: none;
 					background: #ffffff;
@@ -223,9 +222,6 @@ body {
 	// detail film update
 	.main-video {
 		.video {
-			.title {
-				display: flex;
-			}
 			img {
 				width: 100%;
 			}
@@ -540,7 +536,6 @@ body {
 				}
 			}
 		}
-
 		.copyright {
 			display: flex;
 			justify-content: space-between;

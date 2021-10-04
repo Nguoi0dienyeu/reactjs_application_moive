@@ -18,6 +18,7 @@ export default function App() {
           <ShowMore />
         </Route>
         <Route path="/detail/:id">
+      {/*su dung bien id trong screens/Detail*/}
           <Details />
         </Route>
         <Route path="/tvshow">

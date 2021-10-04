@@ -6,7 +6,7 @@ export default function FilmsUpdate() {
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios.get('movie/now_playing?');
-      const removed = result.data.results.splice(4, 20);
+      const removed = result.data.results.splice(4,20);
       setData(result.data.results);
     };
     fetchData();

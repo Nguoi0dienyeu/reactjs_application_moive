@@ -8,7 +8,6 @@ export default function TvShow() {
 			const result = await axios.get('/tv/popular?');
 			const removed = result.data.results.splice(6, 20);
 			setData(result.data.results);
-			console.log('Removed Movie:', removed);
 		};
 		fetchData();
 	}, []);

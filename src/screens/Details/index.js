@@ -1,50 +1,59 @@
-import React from 'react';
-import { BrowserRouter as Router,useParams } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { BrowserRouter as Router, useParams } from 'react-router-dom';
 import Navigations from 'components/Navigations/header.js';
 import Footer from 'components/Footer';
+
 export default function Details() {
-	let {id} = useParams();
-	console.log("useParams ID:",id);
+	const [data, setData] = useState([]);
+	let { id } = useParams();
+	// su dung {id} truyen vao cho route
+	useEffect(() => {
+		const fetchData = async () => {
+			const detail = await axios.get(`movie/${id}/videos?&language=en-US`);
+			const newdata = detail.data.results.slice(0,1);
+			if (newdata.length > 0) {
+				// check điều kiện chiều dài của mảng mới > 0 thì set
+			} 
+			setData(newdata);
+		};
+		fetchData();
+	}, []);
+
+	const EmberYoutube = ({emberKey}) =>(
+		<div className="video-responsive" key="index">
+			<iframe
+				width="1200"
+				height="510"
+				name="Offical Trailer"
+				src ={`https://www.youtube.com/embed/${emberKey}`}
+				frameBorder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowFullScreen
+				site="Youtube"
+				title="EmberVideo youtube"
+			/>
+		</div>
+	);
+
 	return (
-		<div className="App">
-			<div className="container-flud">
-				<Navigations />
-				<div className="main-video">
-					<div className="video">
-						<div className="title">
-							<h1>Watching</h1>
-						</div>
-						<img
-							src="https://www.themoviedb.org/t/p/original/6s1KfGZINuUoIgWyeVT2ehxUrvP.jpg"
-							alt="sang-chi"
-						/>
-						<div className="info">
-							<div className="sub-info">
-								<p>
-									Title Film:
-									<label>Shang-Chi and the Legend of the Ten Rings</label>
-								</p>
-								<p>
-									Actor:<label>Destin Daniel Cretton, David Callaham</label>
-								</p>
-								<p>
-									Director:<label>Destin Daniel Cretton</label>
-								</p>
-								<p>
-									Gener:<label>Action</label>
-								</p>
-								<p>
-									Release year: <label>September 2021</label>
-								</p>
-								<p>
-									IMDB rating:<label>8.5</label>
-								</p>
-							</div>
+			<div className="App">
+				<div className="container-flud">
+					<Navigations />
+					<div className="main-video">
+						<div className="video">
+								<div className="title">
+									<h1>Watching</h1>									
+									<div className="info">
+									{data.map((items,index) => (
+									<EmberYoutube emberKey={items.key} />
+									))}
+									</div>
+								</div>
 						</div>
 					</div>
 				</div>
+				<Footer />
 			</div>
-			<Footer />
-		</div>
 	);
 }

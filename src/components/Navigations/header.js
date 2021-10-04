@@ -6,7 +6,6 @@ function Navigations() {
 	const [isActive, setIsActive] = useDetectOutsideClick(imageEL, true);
 	const onButtonClick = () => setIsActive(!isActive);
 	return (
-		<>
 			<div className="nav">
 				<a href="/">
 					<img src="logo512.png" alt="logo" />
@@ -38,7 +37,6 @@ function Navigations() {
 					</button>
 				</div>
 			</div>
-		</>
 	);
 }
 export default Navigations;

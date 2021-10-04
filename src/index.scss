@@ -1,7 +1,7 @@
 .App {
+	.container-flud {
 	@media screen and (max-width: 1200px) {
 		overflow: hidden;
-		.header {
 			.nav {
 				margin: 20px 20px 0 20px;
 				#nav-second {
@@ -9,7 +9,7 @@
 					position: absolute;
 					background: #282828;
 					overflow: hidden;
-					visibility: hidden;
+					visibility: visible;
 					z-index: 1000;
 					opacity: 90%;
 					padding-bottom: 30px;
@@ -51,7 +51,7 @@
 					}
 				}
 			}
-		}
+
 		// showmore
 		#container {
 			.top-movies {
@@ -221,4 +221,5 @@
 			}
 		}
 	}
+}
 }
