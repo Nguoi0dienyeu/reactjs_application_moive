@@ -2,14 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, useParams } from 'react-router-dom';
 import axios from 'axios';
 
-export default function DetailTitle() {
+export default function DetailTitleTv() {
 	const [data, setData] = useState([]);
 	let { id } = useParams();
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const titles = await axios.get(`movie/${id}?&language=en-US`);
+			const titles = await axios.get(`tv/${id}?&language=en-US`);
 			setData(titles.data);
+			console.log("'Nhận thông tin tvshow:'", titles.data);
 		};
 		fetchData();
 	}, []);
@@ -18,16 +19,16 @@ export default function DetailTitle() {
 		<div className="title-detail">
 			<div className="sub-info">
 				<p>
-					Title:<label>{data.title}</label>
+					Title:<label>{data.name}</label>
 				</p>
 				<p>
 					Overview:<label>{data.overview}</label>
 				</p>
 				<p>
-					Release Date:<label>{data.release_date}</label>
+					Release Date:<label>{data.last_air_date}</label>
 				</p>
 				<p>
-					Language: <label>{data.original_language}</label>
+					Language: <label></label>
 				</p>
 				<p>
 					Rate imdb: <label>{data.vote_average}</label>
