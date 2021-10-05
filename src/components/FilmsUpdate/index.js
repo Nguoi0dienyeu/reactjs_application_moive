@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
+
 export default function FilmsUpdate() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -8,6 +9,7 @@ export default function FilmsUpdate() {
       const result = await axios.get('movie/now_playing?');
       const removed = result.data.results.splice(4,20);
       setData(result.data.results);
+      console.log("Data khi đã lấy api:",result.data.results);
     };
     fetchData();
   }, []);

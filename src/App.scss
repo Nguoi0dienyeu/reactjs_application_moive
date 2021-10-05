@@ -169,6 +169,123 @@ body {
 				margin-top: 20px;
 			}
 		}
+		#site-footer {
+			background: url(footer_bg.png) no-repeat;
+			min-height: 310px;
+			background-size: cover;
+			color: white;
+			margin: 50px 0 0 0;
+
+			.fot-container {
+				display: flex;
+				justify-content: space-between;
+				padding-top: 50px;
+				max-width: 1200px;
+				margin: auto;
+
+				img {
+					width: 64px;
+				}
+
+				.left-fot {
+					margin-left: 20px;
+				}
+
+				.center-fot {
+					.three-menu li a:hover {
+						color: #ff9900;
+						transition: 0.4s;
+					}
+
+					h1 {
+						margin-left: 40px;
+					}
+
+					ul.three-menu {
+						li {
+							line-height: 50px;
+							margin-left: 0;
+						}
+					}
+
+					a {
+						color: #ffffff;
+					}
+				}
+
+				.socials {
+					margin-right: 20px;
+
+					.confirm {
+						margin-top: 30px;
+						border: 1px solid #ffffff;
+						border-right: none;
+
+						input {
+							background: transparent;
+							border: none;
+							line-height: 45px;
+							padding: 0 15px 0 15px;
+							font-size: 13px;
+							font-weight: 700;
+							font-style: italic;
+							color: white;
+							max-width: 250px;
+							width: 250px;
+						}
+
+						label {
+							background: #ff9900;
+							padding: 20px;
+
+							a {
+								color: #ffffff;
+							}
+						}
+					}
+
+					.confirm:hover,
+					.confirm:focus {
+						border: 1px solid #ff9900;
+						border-right: none;
+						transition: 0.4s;
+					}
+
+					.link label:hover {
+						background: #ff9900;
+						transition: 0.4s;
+					}
+
+					.link {
+						display: flex;
+						justify-content: flex-start;
+						margin-left: -10px;
+
+						label {
+							background: transparent;
+							line-height: 20px;
+							padding: 16px 12px 12px 13px;
+							border: 1px solid;
+							border-radius: 30px;
+							cursor: pointer;
+							margin-left: 10px;
+
+							a {
+								color: #ffffff;
+								font-size: 20px;
+								font-weight: 600;
+								padding: 10px;
+							}
+						}
+					}
+				}
+			}
+			.copyright {
+				display: flex;
+				justify-content: space-between;
+				margin: 10px;
+			}
+		}
 	}
 
 	.tv {
@@ -226,16 +343,22 @@ body {
 				width: 100%;
 			}
 		}
-		.info {
+		.title-detail {
+			background: rgb(166, 166, 166);
+			font-family: Roboto;
 			.sub-info {
-				background: gray;
 				p {
 					color: #ffffff;
 					padding: 10px;
+					font-weight: 300;
+					font-size: 20px;
+					text-align: left;
 				}
 				label {
-					color: orange;
+					color: #000000;
 					margin-left: 10px;
+					text-transform: none;
+					padding: 20px;
 				}
 			}
 		}
@@ -425,121 +548,4 @@ body {
 		}
 	}
 	// endshowmore film
-	#site-footer {
-		background: url(footer_bg.png) no-repeat;
-		min-height: 310px;
-		background-size: cover;
-		color: white;
-		margin: 50px 0 0 0;
-
-		.fot-container {
-			display: flex;
-			justify-content: space-between;
-			padding-top: 50px;
-			max-width: 1200px;
-			margin: auto;
-
-			img {
-				width: 64px;
-			}
-
-			.left-fot {
-				margin-left: 20px;
-			}
-
-			.center-fot {
-				.three-menu li a:hover {
-					color: #ff9900;
-					transition: 0.4s;
-				}
-
-				h1 {
-					margin-left: 40px;
-				}
-
-				ul.three-menu {
-					li {
-						line-height: 50px;
-						margin-left: 0;
-					}
-				}
-
-				a {
-					color: #ffffff;
-				}
-			}
-
-			.socials {
-				margin-right: 20px;
-
-				.confirm {
-					margin-top: 30px;
-					border: 1px solid #ffffff;
-					border-right: none;
-
-					input {
-						background: transparent;
-						border: none;
-						line-height: 45px;
-						padding: 0 15px 0 15px;
-						font-size: 13px;
-						font-weight: 700;
-						font-style: italic;
-						color: white;
-						max-width: 250px;
-						width: 250px;
-					}
-
-					label {
-						background: #ff9900;
-						padding: 20px;
-
-						a {
-							color: #ffffff;
-						}
-					}
-				}
-
-				.confirm:hover,
-				.confirm:focus {
-					border: 1px solid #ff9900;
-					border-right: none;
-					transition: 0.4s;
-				}
-
-				.link label:hover {
-					background: #ff9900;
-					transition: 0.4s;
-				}
-
-				.link {
-					display: flex;
-					justify-content: flex-start;
-					margin-left: -10px;
-
-					label {
-						background: transparent;
-						line-height: 20px;
-						padding: 16px 12px 12px 13px;
-						border: 1px solid;
-						border-radius: 30px;
-						cursor: pointer;
-						margin-left: 10px;
-
-						a {
-							color: #ffffff;
-							font-size: 20px;
-							font-weight: 600;
-							padding: 10px;
-						}
-					}
-				}
-			}
-		}
-		.copyright {
-			display: flex;
-			justify-content: space-between;
-			margin: 10px;
-		}
-	}
 }

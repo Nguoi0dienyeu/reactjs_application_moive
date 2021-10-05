@@ -1,7 +1,41 @@
+.App .container-flud .nav #nav-second.mobile.active {
+	visibility: visible;
+}
 .App {
+	@media screen and (max-width: 768px) {
+		.fot-container {
+			flex-wrap: wrap;
+			.left-fot {
+				padding-left: 70px;
+			}
+			.socials {
+				margin: 0 0 5rem 5.5rem;
+			}
+			.confirm {
+				input {
+					width: auto;
+				}
+			}
+		}
+	}
+	@media screen and (max-width: 552px) {
+		footer#site-footer {
+			.fot-container {
+				.center-fot {
+					margin-left: 50px;
+				}
+				.socials {
+					.confirm {
+						display: flex;
+						width: 160px;
+					}
+				}
+			}
+		}
+	}
 	.container-flud {
-	@media screen and (max-width: 1200px) {
-		overflow: hidden;
+		@media screen and (max-width: 1200px) {
+			overflow: hidden;
 			.nav {
 				margin: 20px 20px 0 20px;
 				#nav-second {
@@ -9,7 +43,7 @@
 					position: absolute;
 					background: #282828;
 					overflow: hidden;
-					visibility: visible;
+					visibility: hidden;
 					z-index: 1000;
 					opacity: 90%;
 					padding-bottom: 30px;
@@ -52,174 +86,125 @@
 				}
 			}
 
-		// showmore
-		#container {
-			.top-movies {
-				.content-film {
-					.film {
-						width: 17.33%;
-						height: 420px;
-						img  {
-							width: 100%;
+			// showmore
+			#container {
+				.top-movies {
+					.content-film {
+						.film {
+							width: 17.33%;
+							height: 420px;
+							img {
+								width: 100%;
+							}
 						}
 					}
-				}
-				.makeStyles-root-1 {
-					margin-top: 30px;
-				}
-			}
-		}
-		.header .nav #nav-second.mobile.active {
-			visibility: visible;
-		}
-		.tv-show {
-			display: flex;
-			flex-wrap: wrap;
-			margin-left: -10px;
-			margin-right: -10px;
-			.row {
-				width: auto;
-				max-width: 100%;
-				padding: 10px;
-				img {
-					background: blue;
-				}
-			}
-		}
-	}
-	@media screen and (max-width: 992px) {
-		.container {
-			margin: 5px;
-			.watch button:hover,
-			.watch button:focus {
-				background: #ff9900;
-				transition: 0.2s;
-			}
-		}
-		.tv-show {
-			.title-tv {
-				margin: 10px;
-			}
-			.row {
-				padding: 0;
-				margin-bottom: 20px;
-			}
-		}
-
-		div#search-nor {
-			img {
-				width: 100%;
-				margin-left: -10px;
-			}
-			.row {
-				text-align: center;
-				.search-second input {
-					padding: 0;
-					text-align: center;
-				}
-			}
-		}
-		div.fot-container {
-			.socials {
-				margin-left: 50px;
-				div.confirm {
-					input {
-						width: 120px;
+					.makeStyles-root-1 {
+						margin-top: 30px;
 					}
 				}
 			}
-		}
-	}
-	@media screen and (max-width: 768px) {
-		.container {
-			.content-film {
+
+			.tv-show {
 				display: flex;
 				flex-wrap: wrap;
-				justify-content: center;
-				align-items: center;
-				.watch {
-					margin: 20px;
-					img {
-						padding-top: 10px;
-					}
-					.btn-w-f button .content-w:hover {
-						transition: 0.1s;
-					}
-				}
-			}
-		}
-		// showmore
-		#container {
-			.top-movies {
-				.content-film {
-					.film {
-						width: 170px;
-						height: 400px;
-					}
-				}
-			}
-		}
-		.tv-show {
-			display: flex;
-			justify-content: space-around;
-		}
-
-		.header #search-nor {
-			display: block;
-			.row-right {
-				text-align: center;
-				margin-top: 50px;
-				img {
-					width: 90%;
-					margin: auto;
-				}
-			}
-		}
-		.fot-container {
-			flex-wrap: wrap;
-			.left-fot {
-				padding-left: 70px;
-			}
-			.center-fot {
-				margin-right: 70px;
-			}
-			.socials {
-				margin: 0 0 5rem 5.5rem;
-			}
-			.confirm {
-				input {
+				margin-left: -10px;
+				margin-right: -10px;
+				.row {
 					width: auto;
+					max-width: 100%;
+					padding: 10px;
+					img {
+						background: blue;
+					}
 				}
 			}
 		}
-	}
-	@media screen and (max-width: 552px) {
-		#site-footer {
-			text-align: center;
-			.fot-container {
-				div.socials {
-					.link {
-						justify-content: center;
+		@media screen and (max-width: 992px) {
+			.container {
+				margin: 5px;
+				.watch button:hover,
+				.watch button:focus {
+					background: #ff9900;
+					transition: 0.2s;
+				}
+			}
+			.tv-show {
+				.title-tv {
+					margin: 10px;
+				}
+				.row {
+					padding: 0;
+					margin-bottom: 20px;
+				}
+			}
+
+			div#search-nor {
+				img {
+					width: 100%;
+					margin-left: -10px;
+				}
+				.row {
+					text-align: center;
+					.search-second input {
+						padding: 0;
+						text-align: center;
 					}
-					.confirm {
-						input {
-							width: auto;
+				}
+			}
+		}
+		@media screen and (max-width: 768px) {
+			.container {
+				.content-film {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					align-items: center;
+					.watch {
+						margin: 20px;
+						img {
+							padding-top: 10px;
+						}
+						.btn-w-f button .content-w:hover {
+							transition: 0.1s;
 						}
 					}
 				}
-				.center-fot {
-					padding-left: 50px;
+			}
+			// showmore
+			#container {
+				.top-movies {
+					.content-film {
+						.film {
+							width: 170px;
+							height: 400px;
+						}
+					}
 				}
-				.socials {
-					margin-left: 80px;
+			}
+			.tv-show {
+				display: flex;
+				justify-content: space-around;
+			}
+			div#search-nor {
+				display: block;
+				.later-trailer {
+					margin-right: 30px;
+					position: relative;
 				}
-				.confirm {
-					input {
-						width: 150px;
+				.title-right {
+					p {
+						text-align: center;
+						margin-right: 30px;
+					}
+				}
+				.row-right {
+					margin-top: 20px;
+					img {
+						width: 100%;
+						margin: auto;
 					}
 				}
 			}
 		}
 	}
-}
 }

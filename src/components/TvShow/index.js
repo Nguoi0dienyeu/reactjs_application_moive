@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { BrowserRouter as Router,Link } from 'react-router-dom';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 export default function TvShow() {
 	const [data, setData] = useState([]);
 	useEffect(() => {
@@ -24,11 +24,11 @@ export default function TvShow() {
 					{data.map((items, index) => (
 						<div className="row" key={index}>
 							<Link to={`/detail/${items.id}`}>
-							<img
-								className="img-tv"
-								src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${items.poster_path}`}
-								alt="tvshow"
-							/>
+								<img
+									className="img-tv"
+									src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${items.poster_path}`}
+									alt="tvshow"
+								/>
 							</Link>
 							<p className="title">
 								<Link to={`/detail/${items.id}`}>{items.name}</Link>

@@ -23,7 +23,7 @@ function SearchMovies() {
 					</div>
 				</div>
 				<div className="row-right">
-					<div>
+					<div className="title-right">
 						<p className="title">Laster Trailer</p>
 					</div>
 					<div className="later-trailer">

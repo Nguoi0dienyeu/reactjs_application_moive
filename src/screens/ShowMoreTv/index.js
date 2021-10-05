@@ -40,7 +40,6 @@ function ShowmoreTv() {
 		fetchData();
 	}, [page]);
 	return (
-		<>
 			<div className="App">
 				<div className="container-flud">
 				<Navigations />
@@ -79,7 +78,6 @@ function ShowmoreTv() {
 				</div>
 				<Footer />
 			</div>
-		</>
 	);
 }
 
