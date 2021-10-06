@@ -13,32 +13,53 @@ export default function DetailTitleTv() {
 			console.log("'Nhận thông tin tvshow:'", titles.data);
 		};
 		fetchData();
-	}, []);
+	}, [id]);
 
 	return (
 		<div className="title-detail">
 			<div className="sub-info">
-				<p>
-					Title:<label>{data.name}</label>
-				</p>
-				<p>
-					Overview:<label>{data.overview}</label>
-				</p>
-				<p>
-					Release Date:<label>{data.last_air_date}</label>
-				</p>
-				<p>
-					Language: <label>{data.languages}</label>
-				</p>
-				<p>
-					Rate imdb: <label>{data.vote_average}</label>
-				</p>
-				<p>
-					Season: <label>{data.number_of_seasons}</label>
-				</p>
-				<p>
-					Number of Espisode: <label htmlFor="">{data.number_of_episodes}</label>
-				</p>
+				<div className="sub-img">
+					<img
+						src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${data.poster_path}`}
+						alt="info"
+					/>
+				</div>
+				<div className="sub-text">
+					<h1>{data.name}</h1>
+					<p>
+						<label>Release Date:</label>
+						<span>{data.last_air_date}</span>
+					</p>
+					<p>
+						<label>Genres:</label>
+						{data.genres &&
+							data.genres.map((items) => <span>{items.name}</span>)}
+					</p>
+					<p>
+						<label>Season: </label>
+						<span>{data.number_of_seasons}</span>
+					</p>
+					<p>
+						<label>Espisode:</label>
+						<span>{data.number_of_episodes}</span>
+					</p>
+					<p>
+						<label>Language:</label>
+						<span>{data.languages}</span>
+					</p>
+					<p>
+						<label>IMDB rating: </label>
+						<span>{data.vote_average}</span>
+					</p>
+					<p>
+						<label>New Season: </label>
+						<span>Update...</span>
+					</p>
+					<div className="overview">
+						<hr />
+						<p className="overview-txt">{data.overview}</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	);

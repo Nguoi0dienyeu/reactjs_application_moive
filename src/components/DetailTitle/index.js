@@ -13,25 +13,38 @@ export default function DetailTitle() {
 		};
 		fetchData();
 	}, []);
-
+console.log("Data nhân được:",data);
 	return (
 		<div className="title-detail">
 			<div className="sub-info">
-				<p>
-					Title:<label>{data.title}</label>
-				</p>
-				<p>
-					Overview:<label>{data.overview}</label>
-				</p>
-				<p>
-					Release Date:<label>{data.release_date}</label>
-				</p>
-				<p>
-					Language: <label>{data.original_language}</label>
-				</p>
-				<p>
-					Rate imdb: <label>{data.vote_average}</label>
-				</p>
+				<div className="sub-img">
+					<img
+						src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${data.poster_path}`}
+						alt="info"
+					/>
+				</div>
+				<div className="sub-text">
+						<h1>{data.title}</h1>
+					<p>
+						<label>Release Date:</label><span>{data.release_date}</span>
+					</p>
+					<p>
+						<label>Language:</label><span>{data.original_language}</span>
+					</p>
+					<p>
+						<label>Genres:</label>
+						{data.genres?data.genres.map(items => <span>{items.name}</span>):null}
+					</p>
+					<p>
+						<label>IMDB rating: </label><span>{data.vote_average}</span>
+					</p>
+					<div className="overview">
+					<hr/>
+					<p className="overview-txt">
+						{data.overview}
+					</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
