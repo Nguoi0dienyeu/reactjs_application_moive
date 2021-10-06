@@ -29,11 +29,15 @@ console.log("Data nhân được:",data);
 						<label>Release Date:</label><span>{data.release_date}</span>
 					</p>
 					<p>
-						<label>Language:</label><span>{data.original_language}</span>
+						<label>Language:</label>
+						{data.spoken_languages?data.spoken_languages.map(items => <span>{items.name}</span>):null}
 					</p>
 					<p>
 						<label>Genres:</label>
 						{data.genres?data.genres.map(items => <span>{items.name}</span>):null}
+					</p>
+					<p>
+						<label>Status :</label><span>{data.status}</span>
 					</p>
 					<p>
 						<label>IMDB rating: </label><span>{data.vote_average}</span>

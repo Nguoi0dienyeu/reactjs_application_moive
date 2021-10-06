@@ -32,7 +32,7 @@ export default function TvShow() {
 							<p className="title">
 								<Link to={`/detailtv/${items.id}`}>{items.name}</Link>
 							</p>
-							<p clas="title2">
+							<p className="title2">
 								{new Date(items.first_air_date).getFullYear()}
 							</p>
 						</div>

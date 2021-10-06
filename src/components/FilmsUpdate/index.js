@@ -39,7 +39,7 @@ export default function FilmsUpdate() {
                   <p>
                     <Link to={`/detail/${items.id}`}>{items.title}</Link>
                   </p>
-                  <p>Year: {new Date(items.release_date).getFullYear()}</p>
+                  <p className="sub-date">{new Date(items.release_date).getFullYear()}</p>
                 </div>
               </div>
             ))}

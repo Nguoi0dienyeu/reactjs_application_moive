@@ -44,7 +44,7 @@ export default function DetailTv() {
 			<div className="main-video">
 				<div className="video">
 					<div className="title">
-					<h1>Watching</h1>
+					<h1 className="top">Watching</h1>
 					</div>
 					<div className="info">
 					{data.map((items,index)=>(

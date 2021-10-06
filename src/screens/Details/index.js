@@ -44,7 +44,7 @@ export default function Details() {
 				<div className="main-video">
 					<div className="video">
 						<div className="title">
-							<h1>Watching</h1>
+							<h1 className= "top">Watching</h1>
 							<div className="info">
 								{data.map((items, index) => (
 									<EmberYoutube emberKey={items.key} />

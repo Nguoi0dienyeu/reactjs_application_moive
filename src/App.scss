@@ -309,6 +309,10 @@ body {
 				font-size: 20px;
 				color: #996633;
 			}
+			.title2 {
+				font-size: 14px;
+				color: gray;
+			}
 		}
 
 		.img-tv {
@@ -329,6 +333,12 @@ body {
 	}
 	// detail film update
 	.main-video {
+		.title {
+			.top {
+				color: orange;
+				text-align: center;
+			}
+		}
 		.title-detail {
 			font-family: 'Roboto','Avenir';
 			margin-top: 50px;
@@ -446,10 +456,14 @@ body {
 		.sub-title {
 			text-align: center;
 			color: #333300;
-
 			p {
 				font-weight: 600;
 			}
+				.sub-date {
+					font-size: 14px;
+					font-weight: 400;
+					color: gray;
+				}
 
 			a:hover {
 				color: #ff3300;
