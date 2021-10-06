@@ -32,32 +32,12 @@ function SearchMovies() {
 								src="https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/4N6zEMfZ57zNEQcM8gWeERFupMv.jpg"
 								alt="What If"
 							/>
-							<svg
-								id="glyphicons-basic"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 32 32"
-							>
-								<path
-									id="play"
-									d="M24.8175,16.86432,9.503,25.77667A1,1,0,0,1,8,24.91235V7.08765a1,1,0,0,1,1.503-.86432L24.8175,15.13568A1.00006,1.00006,0,0,1,24.8175,16.86432Z"
-								/>
-							</svg>
 						</div>
 						<div className="trailer">
 							<img
 								src="https://www.themoviedb.org/t/p/w355_and_h200_multi_faces/oKxrDdG0SfmWRtJYmreK4rjDMUo.jpg"
 								alt="tokyo"
 							/>
-							<svg
-								id="glyphicons-basic"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 32 32"
-							>
-								<path
-									id="play"
-									d="M24.8175,16.86432,9.503,25.77667A1,1,0,0,1,8,24.91235V7.08765a1,1,0,0,1,1.503-.86432L24.8175,15.13568A1.00006,1.00006,0,0,1,24.8175,16.86432Z"
-								/>
-							</svg>
 						</div>
 					</div>
 				</div>

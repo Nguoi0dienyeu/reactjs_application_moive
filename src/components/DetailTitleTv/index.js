@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, useParams } from 'react-router-dom';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, useParams } from "react-router-dom";
+import axios from "axios";
 
 export default function DetailTitleTv() {
 	const [data, setData] = useState([]);
@@ -28,10 +28,16 @@ export default function DetailTitleTv() {
 					Release Date:<label>{data.last_air_date}</label>
 				</p>
 				<p>
-					Language: <label></label>
+					Language: <label>{data.languages}</label>
 				</p>
 				<p>
 					Rate imdb: <label>{data.vote_average}</label>
+				</p>
+				<p>
+					Season: <label>{data.number_of_seasons}</label>
+				</p>
+				<p>
+					Number of Espisode: <label htmlFor="">{data.number_of_episodes}</label>
 				</p>
 			</div>
 		</div>

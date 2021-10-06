@@ -1,7 +1,6 @@
 import axios from 'axios';
 
 axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
-
 axios.interceptors.request.use(function (config) {
 	// DO somthing with request sent
 	if (!config.params) {

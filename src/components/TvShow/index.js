@@ -12,7 +12,6 @@ export default function TvShow() {
 		fetchData();
 	}, []);
 	return (
-		<>
 			<div className="tv">
 				<div className="title-tv">
 					<p className="title-left">tv show</p>
@@ -40,6 +39,5 @@ export default function TvShow() {
 					))}
 				</div>
 			</div>
-		</>
 	);
 }
