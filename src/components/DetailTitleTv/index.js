@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, useParams } from "react-router-dom";
 import axios from "axios";
+import CastTv from 'components/CastTv/';
 
 export default function DetailTitleTv() {
 	const [data, setData] = useState([]);
@@ -10,10 +11,9 @@ export default function DetailTitleTv() {
 		const fetchData = async () => {
 			const titles = await axios.get(`tv/${id}?&language=en-US`);
 			setData(titles.data);
-			console.log("'Nhận thông tin tvshow:'", titles.data);
 		};
 		fetchData();
-	}, [id]);
+	}, []);
 
 	return (
 		<div className="title-detail">
@@ -26,6 +26,7 @@ export default function DetailTitleTv() {
 				</div>
 				<div className="sub-text">
 					<h1>{data.name}</h1>
+					
 					<p>
 						<label>Release Date:</label>
 						<span>{data.last_air_date}</span>
@@ -54,6 +55,9 @@ export default function DetailTitleTv() {
 					<p>
 						<label>New Season: </label>
 						<span>Update...</span>
+					</p>
+					<p>
+					<CastTv />
 					</p>
 					<div className="overview">
 						<hr />
