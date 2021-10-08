@@ -53,14 +53,14 @@ export default function DetailTitle() {
             <label>IMDB rating: </label>
             <span>{data.vote_average}</span>
           </p>
-          <p>
-            <CastMovie />
-          </p>
           <div className="overview">
             <hr />
             <p className="overview-txt">{data.overview}</p>
           </div>
         </div>
+      </div>
+      <div className="profile">
+        <CastMovie />
       </div>
     </div>
   );

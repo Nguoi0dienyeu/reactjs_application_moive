@@ -14,7 +14,7 @@ export default function CastTv() {
 			console.log("Data api credits:",detail.data);
 		};
 		fetchData();
-	}, []);
+	}, [id]);
 	return (
 		<div className="character">
 			<label>Cast:</label>

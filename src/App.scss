@@ -331,7 +331,7 @@ body {
 		opacity: 70%;
 		transition: 0.5s;
 	}
-	// detail film update
+
 	.main-video {
 		.title {
 			.top {
@@ -340,7 +340,7 @@ body {
 			}
 		}
 		.title-detail {
-			font-family: 'Roboto','Avenir';
+			font-family: "Roboto", "Avenir";
 			margin-top: 50px;
 			.sub-info {
 				display: flex;
@@ -355,50 +355,89 @@ body {
 						opacity: 50%;
 						margin-top: 20px;
 					}
-				p.overview-txt {
-					color: #333300;
-					font-size: 18px;
-					font-weight: 300;
-					line-height: 30px;
-					text-align: justify;
+					p.overview-txt {
+						color: #333300;
+						font-size: 18px;
+						font-weight: 300;
+						line-height: 30px;
+						text-align: justify;
+					}
 				}
-			}
 				.sub-text {
 					margin-left: 20px;
-					.character {
-						display: flex;
-						flex-wrap:wrap;
-						span {
-							line-height: 25px;
+				}
+			}
+			h1 {
+				font-size: 40px;
+				color: orange;
+			}
+			p {
+				color: #000000;
+				padding: 2px;
+				font-size: 15px;
+				text-align: left;
+				display: flex;
+				justify-content: flex-start;
+				align-items: center;
+				label {
+					width: 100px;
+					font-weight: 600;
+					color: #000;
+				}
+				span {
+					color: gray;
+					margin-left: 10px;
+					font-size: 14px;
+					text-transform: none;
+				}
+			}
+		}
+		// cast and crew
+		.profile {
+			font-family: 'Roboto';
+			margin-top: 50px;
+		.cast-crew {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			p {
+				font-size: 20px;
+				font-weight: 500;
+			}
+		}
+		.box-people {
+			display: flex;
+			margin-top: 20px;
+			.people_img {
+				background: #f5f5f0;
+				border: 1px solid #e0e0d1;
+				margin: 0 15px 0 0;
+				border-top-left-radius: 10px;
+				border-top-right-radius: 10px;
+				box-shadow: 2px 1px 10px #8888886b;
+				img.profile {
+					border-top-left-radius: 10px;
+					border-top-right-radius: 10px;
+					margin-top: 0;
+				}
+				.cast_txt {
+					padding-left: 7px;
+					p.txt {
+						a {
+							font-size: 18px;
+							font-weight: bold;
+							font-family: Roboto;
 						}
 					}
-				}
-				h1 {
-					font-size: 40px;
-					color: orange;
-				}
-				p {
-					color: #000000;
-					padding: 2px;
-					font-size: 15px;
-					text-align: left;
-					display: flex;
-					justify-content: flex-start;
-					align-items: center;
-					label {
-						width: 100px;
-						font-weight: 600;
-						color: #000;
-					}
-					span {
-						color: gray;
-						margin-left: 10px;
+					.txt {
 						font-size: 14px;
-						text-transform: none;
+						color: #595959;
 					}
 				}
 			}
 		}
+	}
+		// end cast and crew movie
 	}
 	.container {
 		margin-top: 70px;
@@ -472,11 +511,11 @@ body {
 			p {
 				font-weight: 600;
 			}
-				.sub-date {
-					font-size: 14px;
-					font-weight: 400;
-					color: gray;
-				}
+			.sub-date {
+				font-size: 14px;
+				font-weight: 400;
+				color: gray;
+			}
 
 			a:hover {
 				color: #ff3300;
