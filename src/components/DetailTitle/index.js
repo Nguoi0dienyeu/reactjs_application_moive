@@ -14,6 +14,7 @@ export default function DetailTitle() {
     };
     fetchData();
   }, []);
+  
   return (
     <div className="title-detail">
       <div className="sub-info">

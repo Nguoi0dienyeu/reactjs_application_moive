@@ -23,7 +23,9 @@ function SimpleSlider() {
     speed: 500,
     slidesToShow: 7,
     slidesToScroll: 3,
-    autoPlay:200,
+    autoplaySpeed:1000,
+    autoplay:true,
+    accessibility:true,
   };
 
 	return (
