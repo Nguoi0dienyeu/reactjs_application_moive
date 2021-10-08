@@ -396,6 +396,7 @@ body {
 		.profile {
 			font-family: 'Roboto';
 			margin-top: 50px;
+
 		.cast-crew {
 			display: flex;
 			justify-content: space-between;
@@ -405,6 +406,25 @@ body {
 				font-weight: 500;
 			}
 		}
+		.slick-arrow {
+			width: auto !important;
+			height:auto!important;
+		}
+		.slick-slider.slick-initialized {
+			margin-top: 0;
+			.slick-arrow {
+					left: 0;
+					top: 0;
+					margin-left: 0;
+			}
+			button.slick-arrow.slick-next {
+				padding-left: 20px;
+			}
+			.slick-prev:before,.slick-next:before {
+				font-size: 20px;
+				color: #000;
+			}
+		}
 		.box-people {
 			display: flex;
 			margin-top: 20px;
@@ -412,19 +432,21 @@ body {
 				background: #f5f5f0;
 				border: 1px solid #e0e0d1;
 				margin: 0 15px 0 0;
+				min-height: 300px;
 				border-top-left-radius: 10px;
 				border-top-right-radius: 10px;
 				box-shadow: 2px 1px 10px #8888886b;
-				img.profile {
+				img.profile-m {
 					border-top-left-radius: 10px;
 					border-top-right-radius: 10px;
 					margin-top: 0;
+					width: 100%;
 				}
 				.cast_txt {
 					padding-left: 7px;
 					p.txt {
 						a {
-							font-size: 18px;
+							font-size: 16px;
 							font-weight: bold;
 							font-family: Roboto;
 						}
