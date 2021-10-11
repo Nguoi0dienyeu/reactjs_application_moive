@@ -3,20 +3,10 @@ import axios from 'axios';
 import { useDetectOutsideClick } from "components/Navigations/useDetectOutsideClick.js";
 
 function Navigations() {
-  const [data,setData] = useState();
   const imageEL = useRef(null);
   const [value, setValue] = useState();
   const [isActive, setIsActive] = useDetectOutsideClick(imageEL, true);
   const onButtonClick = () => setIsActive(!isActive);
-
-  useEffect(()=>{
-    const fetchData = async() => {
-        // statements
-        const result = await axios.get('search/movie?&language=en-US&page=1&include_adult=false');
-        setData(result.data);
-    }
-    fetchData();
-  });
   const filter = (e) => {
     setValue(e.target.value);
     console.log("Input value:",e.target.value);

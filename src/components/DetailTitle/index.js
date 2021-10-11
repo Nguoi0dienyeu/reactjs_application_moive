@@ -1,20 +1,32 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, useParams } from "react-router-dom";
-import CastMovie from "components/CastMovie/";
+import Cast from "components/Cast/";
 import axios from "axios";
 
 export default function DetailTitle() {
   const [data, setData] = useState([]);
   let { id } = useParams();
 
+  // detail movie
   useEffect(() => {
     const fetchData = async () => {
       const titles = await axios.get(`movie/${id}?&language=en-US`);
       setData(titles.data);
+      console.log("Movie:", titles.data);
     };
     fetchData();
   }, [id]);
-  
+
+  // detail  tvshow
+  useEffect(() => {
+    const fetchData = async () => {
+      const tvlist = await axios.get(`tv/${id}?&language=en-US`);
+      setData(tvlist.data);
+      console.log("Tv:", tvlist.data);
+    };
+    fetchData();
+  }, [id]);
+
   return (
     <div className="title-detail">
       <div className="sub-info">
@@ -25,14 +37,18 @@ export default function DetailTitle() {
           />
         </div>
         <div className="sub-text">
-          <h1>{data.title}</h1>
+          <h1>{data.name} {data.title}</h1>
           <p>
             <label>Time:</label>
-            <span>{data.runtime} minutes</span>
+            <span>
+              {data.runtime} {data.episode_run_time} minutes
+            </span>
           </p>
           <p>
             <label>Release Date:</label>
-            <span>{data.release_date}</span>
+            <span>
+              {data.release_date} {data.last_air_date}
+            </span>
           </p>
           <p>
             <label>Language:</label>
@@ -54,6 +70,10 @@ export default function DetailTitle() {
             <label>IMDB rating: </label>
             <span>{data.vote_average}</span>
           </p>
+          <p>
+            <label>Created By: </label>
+            {data.created_by?data.created_by.map((items) => <span>{items.name}</span>):null}
+          </p>
           <div className="overview">
             <hr />
             <p className="overview-txt">{data.overview}</p>
@@ -61,7 +81,7 @@ export default function DetailTitle() {
         </div>
       </div>
       <div className="profile">
-        <CastMovie />
+        <Cast />
       </div>
     </div>
   );

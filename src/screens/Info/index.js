@@ -9,6 +9,7 @@ export default function Details() {
 	const [data, setData] = useState([]);
 	let { id } = useParams();
 	// su dung {id} truyen vao cho route
+	// movies
 	useEffect(() => {
 		const fetchData = async () => {
 			const detail = await axios.get(`movie/${id}/videos?&language=en-US`);
@@ -20,6 +21,18 @@ export default function Details() {
 		};
 		fetchData();
 	}, [id]);
+// tvshow
+	useEffect(()=>{
+		const fetchData = async() => {
+			const detail = await axios.get(`tv/${id}/videos?&language=en-US`);
+			const newdata = detail.data.results.slice(0,1);
+		  // tv_id
+		  if (newdata.length > 0) {
+		  }
+		  setData(newdata);
+    }
+		fetchData();
+	},[id]);
 
 	const EmberYoutube = ({ emberKey }) => (
 		<div className="video-responsive" key="index">

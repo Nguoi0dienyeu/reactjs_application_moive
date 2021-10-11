@@ -7,8 +7,8 @@ import { BrowserRouter as Router, useParams } from "react-router-dom";
 
 function SimpleSlider() {
 	const [data, setData] = useState([]);
-
 	let { id } = useParams();
+// data movie
 	useEffect(() => {
 		const fetchData = async () => {
 			const detail = await axios.get(`movie/${id}/credits?&language=en-US`);
@@ -16,6 +16,14 @@ function SimpleSlider() {
 		};
 		fetchData();
 	}, [id]);
+// data tvshow
+  useEffect(() => {
+    const fetchData = async () => {
+      const detail = await axios.get(`tv/${id}/credits?&language=en-US`);
+      setData(detail.data.cast);
+    };
+    fetchData();
+  }, [id]);
 
 	  const settings = {
     dots: false,

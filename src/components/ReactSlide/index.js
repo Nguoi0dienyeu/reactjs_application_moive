@@ -10,7 +10,7 @@ export default function SimpleSlider() {
     speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplaySpeed: 2500,
+    autoplaySpeed:3000,
     autoplay: true,
     accessibility: true,
   };
