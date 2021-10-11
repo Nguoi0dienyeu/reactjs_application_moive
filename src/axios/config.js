@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
+axios.defaults.baseImg = 'https://www.themoviedb.org/t/p/';
 axios.interceptors.request.use(function (config) {
 	// DO somthing with request sent
 	if (!config.params) {
@@ -12,4 +13,3 @@ axios.interceptors.request.use(function (config) {
 	// Do something request error
 	return Promise.reject(error);
 });
-console.log("-> Config Axios youtube");

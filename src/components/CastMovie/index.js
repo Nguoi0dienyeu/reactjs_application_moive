@@ -20,10 +20,10 @@ function SimpleSlider() {
 	  const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 2000,
     slidesToShow: 7,
     slidesToScroll: 3,
-    autoplaySpeed:1000,
+    autoplaySpeed:3000,
     autoplay:true,
     accessibility:true,
   };
@@ -44,7 +44,7 @@ function SimpleSlider() {
 							alt="cast"
 						/>
 						<div className="cast_txt">
-							<p className="txt"><a href="">{items.name}</a></p>
+							<p className="txt"><a href="/">{items.name}</a></p>
 							<p className="txt">{items.character}</p>
 						</div>
 					</div>

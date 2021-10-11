@@ -13,7 +13,7 @@ export default function DetailTitle() {
       setData(titles.data);
     };
     fetchData();
-  }, []);
+  }, [id]);
   
   return (
     <div className="title-detail">

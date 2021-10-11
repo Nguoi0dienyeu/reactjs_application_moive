@@ -24,7 +24,6 @@ export default function ShowMore() {
       const list = await axios.get('/movie/now_playing?');
       setData(list.data.results);
       setTotalpage(list.data.total_pages);
-      console.log('List Data:', list.data);
     };
     fetchData();
   }, []);

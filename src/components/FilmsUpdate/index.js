@@ -16,9 +16,9 @@ export default function FilmsUpdate() {
   return (
       <div className="container">
         <div className="title">
-          <p className="title-left">Film Update</p>
+          <p className="title-left">News Update</p>
           <p className="title-right">
-            <Link to="/showmore"> Show More...</Link>
+            <Link to="/showmore"> Show More -></Link>
           </p>
         </div>
         <div className="content">

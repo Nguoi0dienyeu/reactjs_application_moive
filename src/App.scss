@@ -395,8 +395,6 @@ body {
 		// cast and crew
 		.profile {
 			font-family: 'Roboto';
-			margin-top: 50px;
-
 		.cast-crew {
 			display: flex;
 			justify-content: space-between;
@@ -418,7 +416,7 @@ body {
 					margin-left: 0;
 			}
 			button.slick-arrow.slick-next {
-				padding-left: 20px;
+				margin-left: 30px;
 			}
 			.slick-prev:before,.slick-next:before {
 				font-size: 20px;
@@ -466,7 +464,6 @@ body {
 		.title {
 			display: flex;
 			justify-content: space-between;
-			margin: 40px 0 40px 0;
 			align-items: center;
 			.title-right a:hover {
 				color: #ff3300;
@@ -490,9 +487,6 @@ body {
 				cursor: pointer;
 				opacity: 70%;
 				transition: 0.5s;
-				.btn-w-f {
-					visibility: hidden;
-				}
 			}
 			.watch {
 				display: flex;
@@ -502,11 +496,11 @@ body {
 				max-width: 320px;
 				height: auto;
 				margin: 5px;
-
 				.btn-w-f {
 					text-align: center;
 					position: absolute;
 					top: 30%;
+          visibility: hidden;
 				}
 
 				img {
@@ -532,6 +526,7 @@ body {
 			color: #333300;
 			p {
 				font-weight: 600;
+        font-size: 20px;
 			}
 			.sub-date {
 				font-size: 14px;

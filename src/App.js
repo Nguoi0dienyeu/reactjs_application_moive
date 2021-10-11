@@ -7,7 +7,6 @@ import ShowMore from 'screens/ShowMore/';
 import Details from 'screens/Details/';
 import DetailTv from 'screens/DetailTv/';
 import ShowMoreTv from 'screens/ShowMoreTv/';
-
 export default function App() {
   return (
     <Router>
