@@ -2,7 +2,10 @@ body {
 	font-family: "Roboto", "Avenir", Arial, sans-serif;
 	margin: 0;
 	padding: 0;
-
+.dark-mode {
+	background: black;
+	color: white;
+}
 	.App {
 		.container-flud {
 			max-width: 1200px;

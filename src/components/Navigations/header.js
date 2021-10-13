@@ -11,6 +11,7 @@ function Navigations() {
     setValue(e.target.value);
     console.log("Input value:",e.target.value);
   }
+
   return (
     <div className="nav">
       <a href="/">

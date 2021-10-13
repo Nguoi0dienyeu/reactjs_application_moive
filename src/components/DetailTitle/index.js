@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, useParams } from "react-router-dom";
-import Cast from "components/Cast/";
 import axios from "axios";
 
 export default function DetailTitle() {
@@ -81,7 +80,6 @@ export default function DetailTitle() {
         </div>
       </div>
       <div className="profile">
-        <Cast />
       </div>
     </div>
   );

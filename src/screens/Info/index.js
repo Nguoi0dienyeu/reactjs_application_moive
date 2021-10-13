@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, useParams } from 'react-router-dom';
 import DetailTitle from 'components/DetailTitle';
+import Cast from 'components/Cast';
 import Navigations from 'components/Navigations/header.js';
 import Footer from 'components/Footer';
 
@@ -67,6 +68,7 @@ export default function Details() {
 						</div>
 					</div>
 				</div>
+        <Cast />
 			</div>
 			<Footer />
 		</div>
