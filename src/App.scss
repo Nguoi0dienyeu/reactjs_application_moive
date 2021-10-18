@@ -280,6 +280,7 @@ body {
 				margin: 10px;
 			}
 		}
+
 	}
 
 	.tv {
@@ -395,8 +396,9 @@ body {
 				}
 			}
 		}
-		// cast and crew
-		.profile {
+		// end cast and crew movie
+				// cast and crew
+					.profile {
 			font-family: 'Roboto';
 		.cast-crew {
 			display: flex;
@@ -460,8 +462,8 @@ body {
 			}
 		}
 	}
-		// end cast and crew movie
 	}
+
 	.container {
 		margin-top: 70px;
 		.title {

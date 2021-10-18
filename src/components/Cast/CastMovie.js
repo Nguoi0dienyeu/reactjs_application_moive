@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { BrowserRouter as Router, useParams } from "react-router-dom";
-import Cast from "components/Cast/index.js";
+import CastView from "components/Cast/CastView.js";
 
-export default function Movie() {
+export default function CastMovie() {
   const [data, setData] = useState([]);
   let { id } = useParams();
   // data movie
@@ -16,8 +16,8 @@ export default function Movie() {
     fetchData();
   }, [id]);
   return (
-    <div className="App">
-      <Cast dataFromApp={data} />
+    <div className="profile">
+      <CastView dataMovie={data} />
     </div>
   );
 }

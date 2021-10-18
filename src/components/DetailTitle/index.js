@@ -9,7 +9,7 @@ export default function DetailTitle() {
   // detail movie
   useEffect(() => {
     const fetchData = async () => {
-      const titles = await axios.get(`movie/${id}?&language=en-US`);
+      const titles = await axios.get(`movie/${id}1?&language=en-US`);
       setData(titles.data);
       console.log("Movie:", titles.data);
     };

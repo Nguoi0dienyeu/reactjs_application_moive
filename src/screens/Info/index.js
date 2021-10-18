@@ -2,18 +2,18 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, useParams } from 'react-router-dom';
 import DetailTitle from 'components/DetailTitle';
-import Cast from 'components/Cast';
+import CastMovie from 'components/Cast/CastMovie.js';
 import Navigations from 'components/Navigations/header.js';
 import Footer from 'components/Footer';
 
 export default function Details() {
 	const [data, setData] = useState([]);
-	let { id } = useParams();
+	let {id } = useParams();
 	// su dung {id} truyen vao cho route
 	// movies
 	useEffect(() => {
 		const fetchData = async () => {
-			const detail = await axios.get(`movie/${id}/videos?&language=en-US`);
+			const detail = await axios.get(`movie/${id}1/videos?&language=en-US`);
 			const newdata = detail.data.results.slice(0, 1);
 			if (newdata.length > 0) {
 				// check điều kiện chiều dài của mảng mới > 0 thì set
@@ -68,7 +68,7 @@ export default function Details() {
 						</div>
 					</div>
 				</div>
-        <Cast />
+        <CastMovie />
 			</div>
 			<Footer />
 		</div>
