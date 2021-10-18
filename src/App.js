@@ -4,7 +4,7 @@ import './index.scss';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from 'screens/HomePage/homepage.js';
 import ShowMore from 'screens/ShowMore/';
-import Info from 'screens/Info/';
+import WatchOnline from 'screens/WatchOnline/';
 import ShowMoreTv from 'screens/ShowMoreTv/';
 export default function App() {
   return (
@@ -19,7 +19,7 @@ export default function App() {
         <Route path="/detail/:id">
           {/*su dung bien id trong screens/Detail*/}
           {/* Detail su dung cho movie film*/}
-          <Info />
+          <WatchOnline />
         </Route>
         <Route path="/tvshow">
           <ShowMoreTv />

@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import SimpleSlider from "components/CastCharacter";
-import CastView from "components/Cast/CastView";
+import DetailTv from 'components/Detail/DetailTv.js';
+import CastTv from 'components/Cast/CastTv.js';
+import DetailMovie from 'components/Detail/DetailMovie.js';
 import Navigations from "components/Navigations/header.js";
 import Footer from "components/Footer";
-import CircularProgress from "@mui/material/CircularProgress";
-import Box from "@mui/material/Box";
 
 export default function WatchOnline(props) {
   const [data, setData] = useState(null);
@@ -18,15 +17,13 @@ export default function WatchOnline(props) {
         <div className="main-video">
           <div className="video">
             <div className="title">
-              <Box sx={{ display: "flex" }}>
-                <CircularProgress />
-              </Box>
               <h1 className="top">Watching</h1>
               <div className="info"></div>
             </div>
           </div>
         </div>
-        <CastView />
+        <DetailTv />
+        <CastTv />
       </div>
       <Footer />
     </div>
