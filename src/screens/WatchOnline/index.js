@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import DetailTv from 'components/Detail/DetailTv.js';
 import CastTv from 'components/Cast/CastTv.js';
 import CastMovie from 'components/Cast/CastMovie.js';
 import DetailMovie from 'components/Detail/DetailMovie.js';
+import DetailTv from 'components/Detail/DetailTv.js';
 import Navigations from "components/Navigations/header.js";
 import Footer from "components/Footer";
 
@@ -22,9 +22,9 @@ export default function WatchOnline(props) {
               <div className="info"></div>
             </div>
           </div>
+          <DetailMovie  />
         </div>
         <CastMovie />
-        <CastTv />
       </div>
       <Footer />
     </div>
