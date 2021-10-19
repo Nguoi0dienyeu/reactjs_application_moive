@@ -3,6 +3,8 @@ import CastTv from 'components/Cast/CastTv.js';
 import CastMovie from 'components/Cast/CastMovie.js';
 import DetailMovie from 'components/Detail/DetailMovie.js';
 import DetailTv from 'components/Detail/DetailTv.js';
+import VideoMovie from 'components/Video/VideoMovie.js';
+import VideoTv from 'components/Video/VideoTv.js';
 import Navigations from "components/Navigations/header.js";
 import Footer from "components/Footer";
 
@@ -19,12 +21,14 @@ export default function WatchOnline(props) {
           <div className="video">
             <div className="title">
               <h1 className="top">Watching</h1>
-              <div className="info"></div>
+              <div className="info">
+                <VideoTv />
+              </div>
             </div>
           </div>
-          <DetailMovie  />
+          <DetailTv  />
         </div>
-        <CastMovie />
+        <CastTv />
       </div>
       <Footer />
     </div>
