@@ -19,9 +19,6 @@ function CastViewTv(props) {
   };
   return (
     <section>
-      <div className="cast-crew">
-        <p>Cast/character</p>
-      </div>
         <div className="box-people">
         <Slider {...settings}>
           {props.dataTv &&
@@ -42,8 +39,7 @@ function CastViewTv(props) {
               </div>
             ))}
              </Slider>
-        </div>
-     
+        </div>  
     </section>
   );
 }

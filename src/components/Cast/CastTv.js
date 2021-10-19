@@ -14,9 +14,5 @@ export default function CastTv() {
     };
     fetchData();
   }, [id]);
-  return (
-    <div className="profile">
-      <CastViewTv dataTv={data} />
-    </div>
-  );
+  return <CastViewTv dataTv={data} />;
 }

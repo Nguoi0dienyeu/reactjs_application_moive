@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import DetailTv from 'components/Detail/DetailTv.js';
 import CastTv from 'components/Cast/CastTv.js';
+import CastMovie from 'components/Cast/CastMovie.js';
 import DetailMovie from 'components/Detail/DetailMovie.js';
 import Navigations from "components/Navigations/header.js";
 import Footer from "components/Footer";
@@ -22,7 +23,7 @@ export default function WatchOnline(props) {
             </div>
           </div>
         </div>
-        <DetailTv />
+        <CastMovie />
         <CastTv />
       </div>
       <Footer />
