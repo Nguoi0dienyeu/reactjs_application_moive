@@ -1,7 +1,7 @@
 import React from "react";
-import VideoMovie from "components/Video/VideoMovie.js";
+import VideoTv from "components/Video/VideoTv.js";
 
-export default function VideoView(props) {
+export default function VideoViewTv(props) {
 	const EmberYoutube = ({ emberKey }) => (
 		<div className="video-responsive" key="index">
 			<iframe
@@ -20,8 +20,8 @@ export default function VideoView(props) {
 	// videotvdata ,,videomoviedata
 	return (
 		<div className="info">
-			{props.videomoviedata &&
-				props.videomoviedata.map((items, index) => (
+			{props.videotvdata &&
+				props.videotvdata.map((items, index) => (
 					<EmberYoutube emberKey={items.key} />
 				))}
 		</div>

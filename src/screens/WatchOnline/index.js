@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WatchMovie from 'screens/WatchMovie';
+import WatchTv from 'screens/WatchTv';
 import Navigations from "components/Navigations/header.js";
 import Footer from "components/Footer";
 
@@ -18,6 +19,7 @@ export default function WatchOnline() {
               <h1 className="top">Watching</h1>
               <div className="info">
               <WatchMovie />
+              <WatchTv />
               </div>
             </div>
           </div>

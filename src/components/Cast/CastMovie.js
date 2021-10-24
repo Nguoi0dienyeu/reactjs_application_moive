@@ -5,7 +5,7 @@ import CastView from "components/Cast/CastView.js";
 
 export default function CastMovie() {
   const [data, setData] = useState([]);
-  let {type,id } = useParams();
+  let { type, id } = useParams();
   // data movie
   useEffect(() => {
     const fetchData = async () => {

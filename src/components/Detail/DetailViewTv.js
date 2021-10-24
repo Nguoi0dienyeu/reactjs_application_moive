@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import DetailTv from "components/Detail/DetailTv.js";
 
 export default function DetailViewTv(props) {

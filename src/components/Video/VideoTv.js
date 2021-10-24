@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import {BrowserRouter as Router,useParams} from 'react-router-dom';
-import VideoView from "components/Video/VideoView.js";
+import { BrowserRouter as Router, useParams } from "react-router-dom";
+import VideoViewTv from "components/Video/VideoViewTv.js";
 
 export default function VideoTv() {
 	const [data, setData] = useState([]);
-	let {type, id } = useParams();
+	let { typetv, id } = useParams();
 	// su dung {id} truyen vao cho route
 	useEffect(() => {
 		const fetchData = async () => {
@@ -18,5 +18,5 @@ export default function VideoTv() {
 		};
 		fetchData();
 	}, [id]);
-	return <VideoView videotvdata={data} />;
+	return <VideoViewTv videotvdata={data} />;
 }

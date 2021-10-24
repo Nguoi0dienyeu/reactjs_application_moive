@@ -5,7 +5,7 @@ import CastViewTv from "components/Cast/CastViewTv.js";
 
 export default function CastTv() {
   const [data, setData] = useState([]);
-  let {type, id } = useParams();
+  let {typetv, id } = useParams();
   // data movie
   useEffect(() => {
     const fetchData = async () => {
@@ -14,5 +14,9 @@ export default function CastTv() {
     };
     fetchData();
   }, [id]);
-  return <CastViewTv dataTv={data} />;
+  return (
+    <div className="profile">
+      <CastViewTv dataTv={data} />
+    </div>
+    );
 }
