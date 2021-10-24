@@ -4,7 +4,7 @@ import './index.scss';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import HomePage from 'screens/HomePage/homepage.js';
 import ShowMore from 'screens/ShowMore/';
-import WatchOnline from 'screens/WatchOnline/';
+import WatchMovie from 'screens/WatchMovie/';
 import ShowMoreTv from 'screens/ShowMoreTv/';
 export default function App() {
   return (
@@ -16,10 +16,10 @@ export default function App() {
         <Route path="/showmore">
           <ShowMore />
         </Route>
-        <Route path="/detail/:id">
-          {/*su dung bien id trong screens/Detail*/}
+        <Route path="/:type/:id">
+          {/*su dung bien id trong component/Detail*/}
           {/* Detail su dung cho movie film*/}
-          <WatchOnline />
+          <WatchMovie />
         </Route>
         <Route path="/tvshow">
           <ShowMoreTv />

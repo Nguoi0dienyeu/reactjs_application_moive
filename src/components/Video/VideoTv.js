@@ -5,7 +5,7 @@ import VideoView from "components/Video/VideoView.js";
 
 export default function VideoTv() {
 	const [data, setData] = useState([]);
-	let { id } = useParams();
+	let {type, id } = useParams();
 	// su dung {id} truyen vao cho route
 	useEffect(() => {
 		const fetchData = async () => {

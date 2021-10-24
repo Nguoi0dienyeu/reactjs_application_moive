@@ -5,7 +5,7 @@ import { BrowserRouter as Router, useParams } from "react-router-dom";
 
 function DetailTv() {
 	const [data, setData] = useState([]);
-	let { id } = useParams();
+	let {type, id } = useParams();
 
 	// detail  tvshow
 	useEffect(() => {

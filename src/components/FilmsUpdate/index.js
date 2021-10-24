@@ -25,7 +25,7 @@ export default function FilmsUpdate() {
           <div className="content-film">
             {data.map((items, index) => (
               <div className="watch" key={index}>
-              <Link to={`/detail/${items.id}`}>
+              <Link to={`/movie/${items.id}`}>
                   <img
                     src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${items.poster_path}`}
                     alt="content"
@@ -37,7 +37,7 @@ export default function FilmsUpdate() {
                 </div>
                 <div className="sub-title">
                   <p>
-                    <Link to={`/detail/${items.id}`}>{items.title}</Link>
+                    <Link to={`/movie/${items.id}`}>{items.title}</Link>
                   </p>
                   <p className="sub-date">{new Date(items.release_date).getFullYear()}</p>
                 </div>

@@ -1,10 +1,5 @@
 import React, { useState } from "react";
-import CastTv from 'components/Cast/CastTv.js';
-import CastMovie from 'components/Cast/CastMovie.js';
-import DetailMovie from 'components/Detail/DetailMovie.js';
-import DetailTv from 'components/Detail/DetailTv.js';
-import VideoMovie from 'components/Video/VideoMovie.js';
-import VideoTv from 'components/Video/VideoTv.js';
+import WatchMovie from 'screens/WatchMovie';
 import Navigations from "components/Navigations/header.js";
 import Footer from "components/Footer";
 
@@ -22,16 +17,11 @@ export default function WatchOnline() {
             <div className="title">
               <h1 className="top">Watching</h1>
               <div className="info">
-                <VideoTv />
-                <VideoMovie />
+              <WatchMovie />
               </div>
             </div>
           </div>
-          <DetailTv  />
-          <DetailMovie  />
         </div>
-        <CastTv />
-        <CastMovie />
       </div>
       <Footer />
     </div>

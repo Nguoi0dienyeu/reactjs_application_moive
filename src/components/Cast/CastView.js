@@ -22,7 +22,7 @@ function CastView(props) {
       <div className="cast-crew">
         <p>Cast/character</p>
       </div>
-        <div className="box-people">
+      <div className="box-people">
         <Slider {...settings}>
           {props.dataMovie &&
             props.dataMovie.map((items, index) => (
@@ -41,9 +41,8 @@ function CastView(props) {
                 </div>
               </div>
             ))}
-             </Slider>
-        </div>
-     
+        </Slider>
+      </div>
     </section>
   );
 }
