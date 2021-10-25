@@ -5,16 +5,17 @@ import VideoViewTv from "components/Video/VideoViewTv.js";
 
 export default function VideoTv() {
 	const [data, setData] = useState([]);
-	let { typetv, id } = useParams();
+	let { types, id } = useParams();
 	// su dung {id} truyen vao cho route
 	useEffect(() => {
 		const fetchData = async () => {
-			const detail = await axios.get(`/${type}/${id}/videos?&language=en-US`);
+			const detail = await axios.get(`/${types}tv/${id}/videos?&language=en-US`);
 			const newdata = detail.data.results.slice(0, 1);
 			if (newdata.length > 0) {
 				// check điều kiện chiều dài của mảng mới > 0 thì set
 			}
 			setData(newdata);
+			console.log("Video: tv , use type",data);
 		};
 		fetchData();
 	}, [id]);

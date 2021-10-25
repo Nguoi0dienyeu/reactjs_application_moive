@@ -9,9 +9,8 @@ export default function CastMovie() {
   // data movie
   useEffect(() => {
     const fetchData = async () => {
-      const detail = await axios.get(`/${type}/${id}/credits?&language=en-US`);
+      const detail = await axios.get(`${type}/${id}/credits?&language=en-US`);
       setData(detail.data.cast);
-      console.log("Data:", detail.data.cast);
     };
     fetchData();
   }, [id]);

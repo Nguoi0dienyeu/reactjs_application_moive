@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import WatchMovie from 'screens/WatchMovie';
+import WatchMovie from 'screens/WatchOnline';
 import WatchTv from 'screens/WatchTv';
-import Navigations from "components/Navigations/header.js";
-import Footer from "components/Footer";
 
 export default function WatchOnline() {
   const [data, setData] = useState(null);
@@ -12,7 +10,6 @@ export default function WatchOnline() {
   return (
     <div className="App">
       <div className="container-flud">
-        <Navigations />
         <div className="main-video">
           <div className="video">
             <div className="title">
@@ -25,7 +22,6 @@ export default function WatchOnline() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

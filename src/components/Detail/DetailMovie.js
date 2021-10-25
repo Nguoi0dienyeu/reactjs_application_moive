@@ -10,9 +10,8 @@ function DetailMovie() {
   // detail movie
   useEffect(() => {
     const fetchData = async () => {
-      const titles = await axios.get(`/${type}/${id}?&language=en-US`);
+      const titles = await axios.get(`${type}/${id}?&language=en-US`);
       setData(titles.data);
-      console.log("Movie:", titles.data);
     };
     fetchData();
   }, [id]);
