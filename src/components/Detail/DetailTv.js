@@ -10,7 +10,7 @@ function DetailTv() {
 	// detail  tvshow
 	useEffect(() => {
 		const fetchData = async () => {
-			const tvlist = await axios.get(`tv/${id}?&language=en-US`);
+			const tvlist = await axios.get(`/${type}/${id}?&language=en-US`);
 			setData(tvlist.data);
 			console.log("Tv:", tvlist.data);
 		};
