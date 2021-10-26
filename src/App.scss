@@ -22,6 +22,7 @@ body {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			padding-bottom: 40px;
 			#nav-second {
 				display: flex;
 				justify-content: center;
@@ -396,9 +397,12 @@ body {
 	// cast
 	.profile {
 		font-family: "Roboto";
+		padding-top: 40px;
 		.cast-crew {
 			p {
-				font-size: 18xp;
+				font-size: 20px;
+				color: orange;
+				font-weight: 500;
 			}
 		}
 		.slick-track {
@@ -428,7 +432,6 @@ body {
 						a {
 							font-size: 16px;
 							font-weight: bold;
-							font-family: Roboto;
 						}
 					}
 					.txt {
@@ -441,13 +444,13 @@ body {
 	}
 	// end cast scss
 	.container {
-		margin-top: 70px;
+		margin-top: 40px;
 		.title {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			.title-right a:hover {
-				color: #ff3300;
+				color: #ff9900;
 				transition: 0.3s;
 			}
 
