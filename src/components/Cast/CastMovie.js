@@ -5,11 +5,11 @@ import CastView from "components/Cast/CastView.js";
 
 export default function CastMovie() {
   const [data, setData] = useState([]);
-  let { type, id } = useParams();
+  let {id } = useParams();
   // data movie
   useEffect(() => {
     const fetchData = async () => {
-      const detail = await axios.get(`${type}/${id}/credits?&language=en-US`);
+      const detail = await axios.get(`movie/${id}/credits?&language=en-US`);
       setData(detail.data.cast);
     };
     fetchData();

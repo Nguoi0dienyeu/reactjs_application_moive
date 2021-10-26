@@ -15,8 +15,8 @@ function WatchTv() {
 						<div className="title">
 							<h1 className="top">Watching</h1>
 							<div className="info">
-								<VideoTv />
-								<DetailTv />
+							<VideoTv />
+							<DetailTv />
 							</div>
 						</div>
 					</div>

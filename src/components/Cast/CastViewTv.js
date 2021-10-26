@@ -19,7 +19,10 @@ function CastViewTv(props) {
   };
   return (
     <section>
-        <div className="box-people">
+      <div className="cast-crew">
+        <p>Cast/character</p>
+      </div>
+      <div className="box-people">
         <Slider {...settings}>
           {props.dataTv &&
             props.dataTv.map((items, index) => (
@@ -38,8 +41,8 @@ function CastViewTv(props) {
                 </div>
               </div>
             ))}
-             </Slider>
-        </div>  
+        </Slider>
+      </div>
     </section>
   );
 }

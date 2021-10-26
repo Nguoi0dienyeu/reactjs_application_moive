@@ -15,8 +15,8 @@ export default function WatchOnline() {
             <div className="title">
               <h1 className="top">Watching</h1>
               <div className="info">
-              <WatchMovie />
               <WatchTv />
+              <WatchMovie />
               </div>
             </div>
           </div>

@@ -5,11 +5,11 @@ import VideoView from "components/Video/VideoView.js";
 
 export default function VideoMovie() {
 	const [data, setData] = useState([]);
-	let { type, id } = useParams();
+	let {id } = useParams();
 	// su dung {id} truyen vao cho route
 	useEffect(() => {
 		const fetchData = async () => {
-			const detail = await axios.get(`${type}/${id}/videos?&language=en-US`);
+			const detail = await axios.get(`movie/${id}/videos?&language=en-US`);
 			const newdata = detail.data.results.slice(0, 1);
 			if (newdata.length > 0) {
 				// check điều kiện chiều dài của mảng mới > 0 thì set

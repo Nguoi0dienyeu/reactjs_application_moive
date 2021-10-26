@@ -5,12 +5,12 @@ import { BrowserRouter as Router, useParams } from "react-router-dom";
 
 function DetailMovie() {
   const [data, setData] = useState([]);
-  let { type,id } = useParams();
+  let { id } = useParams();
 
   // detail movie
   useEffect(() => {
     const fetchData = async () => {
-      const titles = await axios.get(`${type}/${id}?&language=en-US`);
+      const titles = await axios.get(`movie/${id}?&language=en-US`);
       setData(titles.data);
     };
     fetchData();

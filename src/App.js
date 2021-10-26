@@ -6,7 +6,6 @@ import HomePage from "screens/HomePage/homepage.js";
 import ShowMore from "screens/ShowMore/";
 import WatchMovie from "screens/WatchMovie/";
 import WatchTv from "screens/WatchTv/";
-// import WatchTv from "screens/WatchTv/";
 import ShowMoreTv from "screens/ShowMoreTv/";
 export default function App() {
   return (
@@ -18,12 +17,12 @@ export default function App() {
         <Route path="/showmore">
           <ShowMore />
         </Route>
-        <Route path="/:type/:id">
+        <Route path="/movie/:id">
           {/*su dung bien id trong component/Detail*/}
           {/* Detail su dung cho movie film*/}
           <WatchMovie />
         </Route>
-        <Route path="/:types/:id">
+        <Route path="/tv/:id">
           <WatchTv />
         </Route>
         <Route path="/tvshow">
