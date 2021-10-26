@@ -14,7 +14,7 @@ function CastView(props) {
     slidesToShow: 7,
     slidesToScroll: 3,
     autoplaySpeed: 3000,
-    autoplay: false,
+    autoplay: true,
     accessibility: true,
   };
   return (

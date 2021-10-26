@@ -11,7 +11,7 @@ function CastViewTv(props) {
     dots: false,
     infinite: true,
     speed: 2000,
-    slidesToShow: 6,
+    slidesToShow: 7,
     slidesToScroll: 3,
     autoplaySpeed: 3000,
     autoplay: true,
