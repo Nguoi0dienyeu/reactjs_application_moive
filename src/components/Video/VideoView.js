@@ -1,5 +1,4 @@
 import React from "react";
-import VideoMovie from "components/Video/VideoMovie.js";
 
 export default function VideoView(props) {
 	const EmberYoutube = ({ emberKey }) => (
@@ -17,13 +16,22 @@ export default function VideoView(props) {
 			/>
 		</div>
 	);
-	// videotvdata ,,videomoviedata
+
 	return (
+	<>
 		<div className="info">
 			{props.videomoviedata &&
 				props.videomoviedata.map((items, index) => (
 					<EmberYoutube emberKey={items.key} />
 				))}
 		</div>
+
+		<div className="info">
+			{props.videotvdata &&
+				props.videotvdata.map((items, index) => (
+					<EmberYoutube emberKey={items.key} />
+				))}
+		</div>
+		</>
 	);
 }

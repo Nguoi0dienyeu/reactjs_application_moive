@@ -3,7 +3,6 @@ import axios from "axios";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import CastTv from "components/Cast/CastTv.js";
 import { BrowserRouter as Router, useParams } from "react-router-dom";
 
 function CastViewTv(props) {
@@ -11,7 +10,7 @@ function CastViewTv(props) {
     dots: false,
     infinite: true,
     speed: 2000,
-    slidesToShow: 7,
+    slidesToShow: 6,
     slidesToScroll: 3,
     autoplaySpeed: 3000,
     autoplay: true,

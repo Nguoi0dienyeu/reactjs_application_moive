@@ -3,7 +3,6 @@ import axios from "axios";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import CastMovie from "components/Cast/CastMovie.js";
 import { BrowserRouter as Router, useParams } from "react-router-dom";
 
 function CastView(props) {

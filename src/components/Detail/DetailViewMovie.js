@@ -1,5 +1,4 @@
 import React from "react";
-import DetailMovie from "components/Detail/DetailMovie.js";
 
 export default function DetailViewMovie(props) {
   return (
@@ -54,15 +53,6 @@ export default function DetailViewMovie(props) {
             <span>
               {props.datadetailmovie && props.datadetailmovie.vote_average}
             </span>
-          </p>
-          <p>
-            <label>Created By: </label>
-            {props.datadetailmovie && props.datadetailmovie.created_by
-              ? props.datadetailmovie &&
-                props.datadetailmovie.created_by.map((items) => (
-                  <span>{items.name}</span>
-                ))
-              : null}
           </p>
           <div className="overview">
             <hr />
