@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useState} from "react";
 import axios from "axios";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -23,8 +23,8 @@ function CastView(props) {
       </div>
       <div className="box-people">
         <Slider {...settings}>
-          {props.dataMovie &&
-            props.dataMovie.map((items, index) => (
+          {props.data &&
+            props.data.map((items, index) => (
               <div className="people_img">
                 <img
                   className="profile-m"

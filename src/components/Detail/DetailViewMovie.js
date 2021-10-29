@@ -7,57 +7,57 @@ export default function DetailViewMovie(props) {
         <div className="sub-img">
           <img
             src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${
-              props.datadetailmovie && props.datadetailmovie.poster_path
+              props.data && props.data.poster_path
             }`}
             alt="info"
           />
         </div>
         <div className="sub-text">
-          <h1>{props.datadetailmovie && props.datadetailmovie.title}</h1>
+          <h1>{props.data && props.data.title}</h1>
           <p>
             <label>Time:</label>
             <span>
-              {props.datadetailmovie && props.datadetailmovie.runtime} minutes
+              {props.data && props.data.runtime} minutes
             </span>
           </p>
           <p>
             <label>Release Date:</label>
             <span>
-              {props.datadetailmovie && props.datadetailmovie.release_date}
+              {props.data && props.data.release_date}
             </span>
           </p>
           <p>
             <label>Language:</label>
-            {props.datadetailmovie && props.datadetailmovie.spoken_languages
-              ? props.datadetailmovie &&
-                props.datadetailmovie.spoken_languages.map((items) => (
+            {props.data && props.data.spoken_languages
+              ? props.data &&
+                props.data.spoken_languages.map((items) => (
                   <span>{items.name}</span>
                 ))
               : null}
           </p>
           <p>
             <label>Genres:</label>
-            {props.datadetailmovie && props.datadetailmovie.genres
-              ? props.datadetailmovie &&
-                props.datadetailmovie.genres.map((items) => (
+            {props.data && props.data.genres
+              ? props.data &&
+                props.data.genres.map((items) => (
                   <span>{items.name}</span>
                 ))
               : null}
           </p>
           <p>
             <label>Status :</label>
-            <span>{props.datadetailmovie && props.datadetailmovie.status}</span>
+            <span>{props.data && props.data.status}</span>
           </p>
           <p>
             <label>IMDB rating: </label>
             <span>
-              {props.datadetailmovie && props.datadetailmovie.vote_average}
+              {props.data && props.data.vote_average}
             </span>
           </p>
           <div className="overview">
             <hr />
             <p className="overview-txt">
-              {props.datadetailmovie && props.datadetailmovie.overview}
+              {props.data && props.data.overview}
             </p>
           </div>
         </div>

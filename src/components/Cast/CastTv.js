@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { BrowserRouter as Router, useParams } from "react-router-dom";
-import CastViewTv from "components/Cast/CastViewTv.js";
+import CastView from "components/Cast/CastView.js";
 
 export default function CastTv() {
   const [data, setData] = useState([]);
@@ -16,7 +16,7 @@ export default function CastTv() {
   }, [id]);
   return (
     <div className="profile">
-      <CastViewTv dataTv={data} />
+      <CastView data={data} />
     </div>
     );
 }

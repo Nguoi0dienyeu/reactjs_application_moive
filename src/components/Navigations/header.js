@@ -15,7 +15,7 @@ function Navigations() {
   return (
     <div className="nav">
       <a href="/">
-        <img src="logo512.png" alt="logo" />
+        <img src="logo.png" alt="logo" />
       </a>
       <div
         id="nav-second"

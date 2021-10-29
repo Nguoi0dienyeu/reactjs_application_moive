@@ -14,9 +14,9 @@ export default function TvShow() {
 	return (
 			<div className="tv">
 				<div className="title-tv">
-					<p className="title-left">tv show</p>
+					<p className="title-left">tv serials</p>
 					<p className="title-right">
-						<Link to="/tvshow">all tv show</Link>
+						<Link to="/tvshow">more tv...</Link>
 					</p>
 				</div>
 				<div className="tv-show">

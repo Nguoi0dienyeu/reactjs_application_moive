@@ -18,20 +18,11 @@ export default function VideoView(props) {
 	);
 
 	return (
-	<>
 		<div className="info">
-			{props.videomoviedata &&
-				props.videomoviedata.map((items, index) => (
+			{props.data &&
+				props.data.map((items, index) => (
 					<EmberYoutube emberKey={items.key} />
 				))}
 		</div>
-
-		<div className="info">
-			{props.videotvdata &&
-				props.videotvdata.map((items, index) => (
-					<EmberYoutube emberKey={items.key} />
-				))}
-		</div>
-		</>
 	);
 }

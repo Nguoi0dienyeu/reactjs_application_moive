@@ -18,5 +18,5 @@ export default function VideoMovie() {
 		};
 		fetchData();
 	}, [id]);
-	return <VideoView videomoviedata={data} />;
+	return <VideoView data={data} />;
 }

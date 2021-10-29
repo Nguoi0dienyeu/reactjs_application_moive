@@ -16,7 +16,7 @@ function DetailTv() {
 		fetchData();
 	}, [id]);
 	return (
-		<DetailViewTv datadetailtv={data} />
+		<DetailViewTv data={data} />
 		);
 }
 export default DetailTv;

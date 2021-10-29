@@ -17,7 +17,7 @@ function DetailMovie() {
   }, [id]);
 
   return (
-    <DetailViewMovie datadetailmovie={data} />
+    <DetailViewMovie data={data} />
     );
 }
 export default DetailMovie;

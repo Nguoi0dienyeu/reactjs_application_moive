@@ -16,7 +16,7 @@ export default function CastMovie() {
   }, [id]);
   return (
     <div className="profile">
-      <CastView dataMovie={data} />
+      <CastView data={data} />
     </div>
   );
 }
