@@ -6,7 +6,7 @@ function Footer() {
 		<footer id = "site-footer">
 			<div className = "fot-container">
 				<div className = "left-fot">
-					<img src="image/logo512.png" alt="logo footer"/>
+					<img src="logo.png" alt="logo footer"/>
 					<p className = "address">Addr: 9067 Zurich, Switzerland 87</p>
 					<p className = "address">Email: abc@gmail.com</p>
 					<p className = "address">Call: 0974280876</p>

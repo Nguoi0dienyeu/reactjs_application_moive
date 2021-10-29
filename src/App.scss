@@ -168,10 +168,6 @@ body {
 				max-width: 1200px;
 				margin: auto;
 
-				img {
-					width: 64px;
-				}
-
 				.left-fot {
 					margin-left: 20px;
 				}
@@ -330,7 +326,6 @@ body {
 
 	.tv {
 		margin-top: 40px;
-
 		.title-tv {
 			display: flex;
 			justify-content: space-between;
@@ -342,8 +337,11 @@ body {
 				text-transform: uppercase;
 			}
 		}
+			.title-right a:hover {
+		color: #ff9900;
+		transition: 0.5s;
 	}
-
+	}
 	.tv-show {
 		display: flex;
 		justify-content: space-between;
