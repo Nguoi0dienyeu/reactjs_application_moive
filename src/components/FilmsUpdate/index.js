@@ -18,7 +18,7 @@ export default function FilmsUpdate() {
         <div className="title">
           <p className="title-left">News Update</p>
           <p className="title-right">
-            <Link to="/showmore"> Show More</Link>
+            <Link to="/showmore">more movies</Link>
           </p>
         </div>
         <div className="content">
@@ -31,6 +31,11 @@ export default function FilmsUpdate() {
                     alt="content"
                   />
                 </Link>
+                 <div className="imdb">
+                    <div className="i-imdb">
+                      {items.vote_average}
+                    </div>
+                  </div>
                 <div className="btn-w-f">
                   <button className="content-w">Watch</button>
                   <button className="content-w">Favourtis</button>

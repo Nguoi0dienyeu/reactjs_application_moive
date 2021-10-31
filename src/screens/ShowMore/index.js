@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
-import Navigations from 'components/Navigations/header.js';
-import Footer from 'components/Footer/';
-import { makeStyles } from '@material-ui/core/styles';
-import Pagination from '@material-ui/lab/Pagination';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import Navigations from "components/Navigations/header.js";
+import Footer from "components/Footer/";
+import { makeStyles } from "@material-ui/core/styles";
+import Pagination from "@material-ui/lab/Pagination";
 // css paginations
 const useStyles = makeStyles((theme) => ({
   root: {
-    '& > * + *': {
+    "& > * + *": {
       marginTop: theme.spacing(2),
     },
   },
@@ -21,7 +21,7 @@ export default function ShowMore() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const list = await axios.get('/movie/now_playing?');
+      const list = await axios.get("/movie/now_playing?");
       setData(list.data.results);
       setTotalpage(list.data.total_pages);
     };
@@ -56,6 +56,9 @@ export default function ShowMore() {
                       alt="film update"
                     />
                   </Link>
+                  <div className="imdb">
+                    <div className="i-imdb">{items.vote_average}</div>
+                  </div>
                   <div className="sub-title">
                     <p>
                       <Link to={`/movie/${items.id}`}>{items.title}</Link>

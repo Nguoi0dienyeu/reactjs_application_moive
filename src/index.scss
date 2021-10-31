@@ -131,13 +131,15 @@
 								width: 100%;
 							}
 						}
+						.imdb {
+							bottom: 40%;
+						}
 					}
 					.makeStyles-root-1 {
 						margin-top: 30px;
 					}
 				}
 			}
-
 			.tv-show {
 				display: flex;
 				flex-wrap: wrap;
@@ -175,6 +177,18 @@
 					background: #ff9900;
 					transition: 0.2s;
 				}
+				.watch {
+					.imdb {
+						bottom: 31%;
+					}
+				}
+			}
+			#container {
+			.film {
+					.imdb {
+						bottom: 40%;
+					}
+				}
 			}
 			.tv-show {
 				.title-tv {
@@ -185,7 +199,6 @@
 					margin-bottom: 20px;
 				}
 			}
-
 			div#search-nor {
 				img {
 					width: 100%;
@@ -230,6 +243,11 @@
 						}
 						.btn-w-f button .content-w:hover {
 							transition: 0.1s;
+						}
+					}
+					.watch {
+						.imdb {
+							bottom: 19%;
 						}
 					}
 				}
