@@ -163,41 +163,35 @@ body {
 			margin: 50px 0 0 0;
 
 			.fot-container {
-				display: flex;
-				justify-content: space-between;
 				padding-top: 50px;
 				max-width: 1200px;
 				margin: auto;
-
-				.left-fot {
-					margin-left: 20px;
-				}
-
-				.center-fot {
-					.three-menu li a:hover {
-						color: #ff9900;
-						transition: 0.4s;
-					}
-
-					h1 {
-						margin-left: 40px;
-					}
-
-					ul.three-menu {
-						li {
-							line-height: 50px;
-							margin-left: 0;
+				.fot-header {
+					display: flex;
+					justify-content: space-between;
+					align-content:center;
+					.header-add {
+						p {
+							color: #ffffff;
+							line-height: 20px;
+							padding-top: 20px;
 						}
 					}
-
-					a {
-						color: #ffffff;
+					ul.three-menu {
+						li {
+							padding-top: 20px;
+							line-height: 25px;
+						}
+						a {
+							color: #ffffff;
+						}
 					}
 				}
-
+				ul.three-menu li a:hover {
+					color:  #ff9900;
+					transition: 0.4s;
+				} 
 				.socials {
-					margin-right: 20px;
-
 					.confirm {
 						margin-top: 30px;
 						border: 1px solid #ffffff;
@@ -212,8 +206,8 @@ body {
 							font-weight: 700;
 							font-style: italic;
 							color: white;
-							max-width: 250px;
-							width: 250px;
+							max-width: 200px;
+							width: 200px;
 						}
 
 						label {
@@ -233,24 +227,17 @@ body {
 						transition: 0.4s;
 					}
 
-					.link label:hover {
-						background: #ff9900;
-						transition: 0.4s;
-					}
-
 					.link {
 						display: flex;
 						justify-content: flex-start;
-						margin-left: -10px;
-
+						padding-top: 20px;
 						label {
 							background: transparent;
 							line-height: 20px;
-							padding: 16px 12px 12px 13px;
-							border: 1px solid;
-							border-radius: 30px;
+							padding: 16px 12px 12px 0px;
+							// border: 1px solid;
+							// border-radius: 30px;
 							cursor: pointer;
-							margin-left: 10px;
 
 							a {
 								color: #ffffff;
@@ -265,7 +252,7 @@ body {
 			.copyright {
 				display: flex;
 				justify-content: space-between;
-				margin: 10px;
+				padding-top: 50px;
 			}
 		}
 		// detailTv
@@ -283,7 +270,7 @@ body {
 				.overview {
 					hr {
 						opacity: 50%;
-						margin-top: 20px;
+						margin-top: 40px;
 					}
 					p.overview-txt {
 						color: #333300;
@@ -294,7 +281,10 @@ body {
 					}
 				}
 				.sub-text {
-					margin-left: 20px;
+					margin-left: 40px;
+					p {
+						padding-top: 20px;
+					}
 				}
 			}
 			h1 {
@@ -405,6 +395,7 @@ body {
 			.top {
 				color: #ff9900;
 				text-align: center;
+				padding: 20px;
 			}
 		}
 	}
@@ -586,10 +577,15 @@ body {
 					min-height: 465px;
 					cursor: pointer;
 					position: relative;
+					padding-bottom: 40px;
 					.title {
 						font-size: 18px;
 						font-weight: 600;
 						font-style: normal;
+						padding-top: 20px;
+					}
+					.title2 {
+						padding-top: 40px;
 					}
 					img {
 						width: 100%;
@@ -601,7 +597,7 @@ body {
 						height: 32px;
 						width: 32px;
 						border-radius: 20px;
-						bottom: 27%;
+						bottom: 32%;
 						right: 3%;
 						position: absolute;
 						display: flex;
@@ -661,12 +657,13 @@ body {
 						color: #ff9900;
 					}
 					.sub-title {
-						text-decoration: none;
 						text-align: left;
+						padding-top: 20px;
 						p.date {
 							font-size: 15px;
 							font-weight: 400;
 							font-style: italic;
+							padding-top: 40px;
 						}
 						p {
 							font-size: 20px;

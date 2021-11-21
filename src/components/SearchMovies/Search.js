@@ -13,8 +13,8 @@ function Search(){
 			console.log("Find:");
 		}
 		fetchData();
-	});
+	}, [searchTerm]);
 	return (
-		<SearchView find ={find} />
+		<SearchView dfind ={find} />
 		);
 }

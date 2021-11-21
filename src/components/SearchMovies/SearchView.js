@@ -41,6 +41,11 @@ function SearchView(props) {
 					onSubmit={onSubmit}
 					value={searchTerm}
 					/>
+					<ul className="found">
+						{props.find && props.find.map((items,index) =>(
+								<li>{items.name}</li>
+							))}
+					</ul>
 				</div>
 			</div>
 			<div className="row-right">

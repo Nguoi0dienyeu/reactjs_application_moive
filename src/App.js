@@ -4,9 +4,9 @@ import "./index.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "screens/HomePage/homepage.js";
 import ShowMore from "screens/ShowMore/";
+import ShowMoreTv from "screens/ShowMoreTv/";
 import WatchMovie from "screens/WatchMovie/";
 import WatchTv from "screens/WatchTv/";
-import ShowMoreTv from "screens/ShowMoreTv/";
 export default function App() {
   return (
     <Router>

@@ -63,7 +63,7 @@ function ShowmoreTv() {
 									<p className="title">
 										<Link to={`/tv/${items.id}`}>{items.name}</Link>
 									</p>
-									<p clas="title2">
+									<p class="title2">
 										{new Date(items.first_air_date).getFullYear()}
 									</p>
 								</div>
