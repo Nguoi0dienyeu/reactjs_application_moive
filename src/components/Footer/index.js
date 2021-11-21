@@ -1,42 +1,64 @@
-import React  from 'react';
+import React from "react";
+import logo from "image/logo.png";
 
 function Footer() {
-
 	return (
-		<footer id = "site-footer">
-			<div className = "fot-container">
-				<div className = "left-fot">
-					<img src="logo.png" alt="logo footer"/>
-					<p className = "address">Addr: 9067 Zurich, Switzerland 87</p>
-					<p className = "address">Email: abc@gmail.com</p>
-					<p className = "address">Call: 0974280876</p>
+		<footer id="site-footer">
+			<div className="fot-container">
+				<div className="left-fot">
+					<a href="/">
+						<img src={logo} alt="logo footer" />
+					</a>
+					<p className="address">Addr: 9067 Zurich, Switzerland 87</p>
+					<p className="address">Email: abc@gmail.com</p>
+					<p className="address">Call: 0974280876</p>
 				</div>
-				<div className = "center-fot">
+				<div className="center-fot">
 					<h1>Custom Services</h1>
-					<ul className = "three-menu">
-						<li><a href="/">Home</a></li>
-						<li><a href="/">Watch Online</a></li>
-						<li><a href="/">Tv Show</a></li>
+					<ul className="three-menu">
+						<li>
+							<a href="/">Home</a>
+						</li>
+						<li>
+							<a href="/">Watch Online</a>
+						</li>
+						<li>
+							<a href="/">Tv Show</a>
+						</li>
 					</ul>
 				</div>
-				<div className ="socials">
+				<div className="socials">
 					<h1>Contact Us</h1>
-					<div className = "link">
-						<label className = "link-font"><a href="/">f</a></label>
-						<label className = "link-font"><a href="/">i</a></label>
-						<label className = "link-font"><a href="/">t</a></label>
+					<div className="link">
+						<label className="link-font">
+							<a href="/">f</a>
+						</label>
+						<label className="link-font">
+							<a href="/">i</a>
+						</label>
+						<label className="link-font">
+							<a href="/">t</a>
+						</label>
 					</div>
-					<div className ="confirm">
-						<input className ="email-con" type="text" placeholder = "Your Email Address" name = "email" required/>
-						<label className = "email-font" type  ="submit" ><a href="/">Send</a></label>
+					<div className="confirm">
+						<input
+							className="email-con"
+							type="text"
+							placeholder="Your Email Address"
+							name="email"
+							required
+						/>
+						<label className="email-font" type="submit">
+							<a href="/">Send</a>
+						</label>
 					</div>
 				</div>
 			</div>
-				<div className = "copyright">
-					<p className = "title">Copyright Moviek</p>
-					<p className = "title">Design Reactjs 2021</p>
-				</div>
+			<div className="copyright">
+				<p className="title">Copyright Moviek</p>
+				<p className="title">Design Reactjs 2021</p>
+			</div>
 		</footer>
 	);
 }
-export  default Footer;
+export default Footer;

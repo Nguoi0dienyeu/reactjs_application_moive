@@ -1,4 +1,5 @@
 import React, { useState, useRef,useEffect } from "react";
+import logo from 'image/logo.png';
 import axios from 'axios';
 import { useDetectOutsideClick } from "components/Navigations/useDetectOutsideClick.js";
 
@@ -15,7 +16,7 @@ function Navigations() {
   return (
     <div className="nav">
       <a href="/">
-        <img src="logo.png" alt="logo" />
+        <img src={logo} alt="logo" />
       </a>
       <div
         id="nav-second"
@@ -24,16 +25,16 @@ function Navigations() {
       >
         <ul className="first-menu">
           <li>
-            <a href="/">Home</a>
+            <a href="/">home</a>
           </li>
           <li>
-            <a href="/">Favourtis</a>
+            <a href="/">favorite</a>
           </li>
           <li>
-            <a href="/tvshow">Tv Show</a>
+            <a href="/tvshow">tv show</a>
           </li>
           <li>
-            <a href="/">Watch Online</a>
+            <a href="/">Watching</a>
           </li>
         </ul>
         <input

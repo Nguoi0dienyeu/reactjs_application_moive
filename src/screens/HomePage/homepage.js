@@ -2,7 +2,7 @@ import React from 'react';
 import SimpleSlider from 'components/ReactSlide/';
 import Navigations from 'components/Navigations/header.js';
 import FilmsUpdate from 'components/FilmsUpdate/';
-import SearchMovies from 'components/SearchMovies/';
+import SearchMovies from 'components/SearchMovies/SearchView.js';
 import TvShow from 'components/TvShow/';
 import Footer from 'components/Footer/';
 

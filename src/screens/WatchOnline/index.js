@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import WatchMovie from 'screens/WatchOnline';
-import WatchTv from 'screens/WatchTv';
+import { render } from "react-dom";
+import WatchMovie from "screens/WatchOnline";
+import WatchTv from "screens/WatchTv";
+import { CircularProgress, Button } from "@material-ui/core";
+import ColoredLinearProgress from "./LineProgress";
 
-export default function WatchOnline() {
-  const [data, setData] = useState(null);
-  const [isloadingOk, setIsloadingOk] = useState(true);
-  const [error, setError] = useState(false);
+export default function WatchOnline(props) {
+  const { loading,Setloading } = props;
 
   return (
     <div className="App">
@@ -13,10 +14,14 @@ export default function WatchOnline() {
         <div className="main-video">
           <div className="video">
             <div className="title">
+              <Button variant="contained" onClick={onClick} disabled={loading}>
+                {loading && <CircularProgress size={16} />}
+                {!loadig && "Click me"}
+              </Button>
               <h1 className="top">Watching</h1>
               <div className="info">
-              <WatchTv />
-              <WatchMovie />
+                <WatchTv />
+                <WatchMovie />
               </div>
             </div>
           </div>
@@ -24,4 +29,9 @@ export default function WatchOnline() {
       </div>
     </div>
   );
+}
+
+function ButtonLoading() {
+  const {loadingOk,SetLoadingOk} = useState();
+
 }

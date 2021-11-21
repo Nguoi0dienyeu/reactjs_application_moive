@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 export default function FilmsUpdate() {
   const [data, setData] = useState([]);
+  
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios.get('movie/now_playing?');
