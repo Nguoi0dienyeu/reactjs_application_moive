@@ -32,7 +32,7 @@ export default function FilmsUpdate() {
                     alt="content"
                   />
                 </Link>
-                 <div className="imdb">
+                  <div className="imdb">
                     <div className="i-imdb">
                       {items.vote_average}
                     </div>

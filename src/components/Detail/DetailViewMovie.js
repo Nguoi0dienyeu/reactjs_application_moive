@@ -1,4 +1,5 @@
 import React from "react";
+import heart from "image/like.png";
 
 export default function DetailViewMovie(props) {
   return (
@@ -44,6 +45,11 @@ export default function DetailViewMovie(props) {
             <label>IMDB rating: </label>
             <span>{props.data.vote_average}</span>
           </p>
+          <div className="favicon">
+            <div className="i-vote">
+              <img src={heart} alt="" />
+            </div>
+          </div>
           <div className="overview">
             <hr />
             <p className="overview-txt">{props.data.overview}</p>

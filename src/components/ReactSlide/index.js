@@ -10,13 +10,14 @@ export default function SimpleSlider() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios.get("movie/now_playing?");
+      const result = await axios.get(`movie/now_playing?`);
       const remove = result.data.results.splice(4, 20);
       setSlide(result.data.results);
       console.log("Slide:", result.data.results);
     };
     fetchData();
   }, []);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -27,10 +28,11 @@ export default function SimpleSlider() {
     autoplay: true,
     accessibility: true,
   };
+
   return (
     <Slider {...settings}>
       {dslide.map((items, index) => (
-        <Link to={`/moive/${items.id}`}>
+        <Link to={`/movie/${items.id}`}>
           <img
             key={index}
             className="img-slick"
