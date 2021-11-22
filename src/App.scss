@@ -86,7 +86,7 @@ body {
 		.slick-next:before {
 			font-size: 40px;
 		}
-		img.img-slick{
+		img.img-slick {
 			width: 100%;
 			height: auto;
 		}
@@ -107,7 +107,7 @@ body {
 
 			.later-trailer {
 				.trailer {
-					display: flex ;
+					display: flex;
 				}
 			}
 
@@ -169,7 +169,7 @@ body {
 				.fot-header {
 					display: flex;
 					justify-content: space-between;
-					align-content:center;
+					align-content: center;
 					.header-add {
 						p {
 							color: #ffffff;
@@ -188,15 +188,17 @@ body {
 					}
 				}
 				ul.three-menu li a:hover {
-					color:  #ff9900;
+					color: #ff9900;
 					transition: 0.4s;
-				} 
+				}
 				.socials {
 					.confirm {
 						margin-top: 30px;
 						border: 1px solid #ffffff;
 						border-right: none;
-
+						display: flex;
+						justify-content: center;
+						align-content: center;
 						input {
 							background: transparent;
 							border: none;
@@ -205,14 +207,11 @@ body {
 							font-size: 13px;
 							font-weight: 700;
 							font-style: italic;
-							color: white;
-							max-width: 200px;
-							width: 200px;
 						}
 
 						label {
 							background: #ff9900;
-							padding: 20px;
+							padding: 13px;
 
 							a {
 								color: #ffffff;

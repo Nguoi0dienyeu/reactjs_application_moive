@@ -16,7 +16,7 @@ function Footer() {
 							</div>
 						</a>
 					</div>
-					<div className="three-menu">
+					<div className="three">
 						<h1>Custom Services</h1>
 						<ul className="three-menu">
 							<li>

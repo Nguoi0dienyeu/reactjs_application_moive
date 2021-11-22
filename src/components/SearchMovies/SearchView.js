@@ -1,7 +1,20 @@
-import React, { useState } from "react";
-function SearchView(props) {
+import React, { useState,useEffect} from "react";
+import axios from 'axios';
+import {BrowserRouter as Router,useParams} from 'react-router-dom';
+function SearchView() {
 	const [searchTerm, setSearchTerm] = useState("");
 	const [searchResult, setResult] = useState([]);
+	const [dfind,setFind] = useState([]);
+	let {id} = useParams();
+
+	useEffect(()=>{
+		const fetchData = async() => {
+			const find_result = await axios.get(`find/{external_id}?&language=en-US&external_source=${id}`);
+			setFind(find_result);
+			console.log("Find:");
+		}
+		fetchData();
+	}, [searchTerm]);
 
 	const onChange  = e => {
 		setSearchTerm(e.target.value);
@@ -42,9 +55,6 @@ function SearchView(props) {
 					value={searchTerm}
 					/>
 					<ul className="found">
-						{props.find && props.find.map((items,index) =>(
-								<li>{items.name}</li>
-							))}
 					</ul>
 				</div>
 			</div>

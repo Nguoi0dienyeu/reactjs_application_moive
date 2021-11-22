@@ -3,21 +3,17 @@
 }
 .App {
 	@media screen and (max-width: 768px) {
-		.fot-container {
+		.fot-header {
 			flex-wrap: wrap;
-			.left-fot {
-				padding-left: 70px;
+			.header-logo {
+				padding: 0 20px 0 40px;
 			}
-			.center-fot {
-				padding-right: 30px;
+			.three {
+				padding-right: 40px;
 			}
 			.socials {
-				margin: 0 0 5rem 5.5rem;
-			}
-			.confirm {
-				input {
-					width: auto;
-				}
+				padding-left: 40px;
+				padding-top: 40px;
 			}
 		}
 		.container-flud {
@@ -53,20 +49,24 @@
 		}
 	}
 	@media screen and (max-width: 552px) {
-		footer#site-footer {
-			.fot-container {
-				.center-fot {
-					margin-left: 50px;
+		.fot-header {
+				.header-logo {
+					padding-left: 70px;
+					padding-bottom: 30px;
+				}
+				.three {
+					padding-left: 70px;
 				}
 				.socials {
+					padding-left: 70px;
 					.confirm {
-						display: flex;
-						width: 160px;
+						input.email-con {
+							width: 150px;
+						}
 					}
 				}
 			}
 		}
-	}
 	.container-flud {
 		@media screen and (max-width: 1200px) {
 			overflow: hidden;
@@ -184,7 +184,7 @@
 				}
 			}
 			#container {
-			.film {
+				.film {
 					.imdb {
 						bottom: 40%;
 					}
