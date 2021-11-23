@@ -2,16 +2,17 @@ import React, { useState,useEffect} from "react";
 import axios from 'axios';
 import {BrowserRouter as Router,useParams} from 'react-router-dom';
 function SearchView() {
-	const [searchTerm, setSearchTerm] = useState("");
+	const [searchTerm, setSearchTerm] = useState([]);
+	const [page, setPage] = useState(1);
 	const [searchResult, setResult] = useState([]);
 	const [dfind,setFind] = useState([]);
 	let {id} = useParams();
 
 	useEffect(()=>{
 		const fetchData = async() => {
-			const find_result = await axios.get(`find/{external_id}?&language=en-US&external_source=${id}`);
+			const find_result = await axios.get(`/search/movie?&language=en-US&page=${page}&include_adult=false`);
 			setFind(find_result);
-			console.log("Find:");
+			console.log("Find:",find_result);
 		}
 		fetchData();
 	}, [searchTerm]);
@@ -54,8 +55,6 @@ function SearchView() {
 					onSubmit={onSubmit}
 					value={searchTerm}
 					/>
-					<ul className="found">
-					</ul>
 				</div>
 			</div>
 			<div className="row-right">

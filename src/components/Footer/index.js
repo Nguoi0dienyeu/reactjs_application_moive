@@ -1,5 +1,8 @@
 import React from "react";
 import logo from "image/logo.png";
+import location from "image/location.png";
+import email from "image/email.png";
+import phone from "image/phone.png";
 
 function Footer() {
 	return (
@@ -9,12 +12,12 @@ function Footer() {
 					<div className="header-logo">
 						<a href="/">
 							<img src={logo} alt="logo footer" />
-							<div className="header-add">
-								<p>9067 Zurich, Switzerland 87</p>
-								<p>abc@gmail.com</p>
-								<p>84 974280876</p>
-							</div>
 						</a>
+							<div className="header-add">
+								<p><img src={location} alt=""/>9067 Zurich, Switzerland 87</p>
+								<p><img src={email} alt=""/>abc@gmail.com</p>
+								<p><img src={phone} alt=""/>84 974280876</p>
+							</div>
 					</div>
 					<div className="three">
 						<h1>Custom Services</h1>
@@ -36,7 +39,7 @@ function Footer() {
 							<label><a href="/">f</a></label>
 							<label><a href="/">i</a></label>
 							<label><a href="/">t</a></label>
-							<label><a href="/">y</a></label>
+							<label><a href="/">s</a></label>
 						</div>
 						<div className="confirm">
 							<input
