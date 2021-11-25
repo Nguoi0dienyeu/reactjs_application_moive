@@ -4,15 +4,14 @@ import {BrowserRouter as Router,useParams} from 'react-router-dom';
 function SearchView() {
 	const [searchTerm, setSearchTerm] = useState([]);
 	const [page, setPage] = useState(1);
-	const [searchResult, setResult] = useState([]);
 	const [dfind,setFind] = useState([]);
 	let {id} = useParams();
 
 	useEffect(()=>{
 		const fetchData = async() => {
-			const find_result = await axios.get(`/search/movie?&language=en-US&page=${page}&include_adult=false`);
-			setFind(find_result);
-			console.log("Find:",find_result);
+			const find_result = await axios.get(`/search/movie?&language=en-US&page=${page}&include_adult=false&query={value}`);
+			setFind(find_result.data);
+			console.log("Find:",find_result.data);
 		}
 		fetchData();
 	}, [searchTerm]);
