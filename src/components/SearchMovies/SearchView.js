@@ -2,28 +2,28 @@ import React, { useState,useEffect} from "react";
 import axios from 'axios';
 import {BrowserRouter as Router,useParams} from 'react-router-dom';
 function SearchView() {
-	const [searchTerm, setSearchTerm] = useState([]);
+	const [query, setQuery] = useState([]);
+	const [searchTerm , setSearchTerm]  = useState([]);
+	const [value, setValue] = useState();
 	const [page, setPage] = useState(1);
-	const [dfind,setFind] = useState([]);
-	let {id} = useParams();
-
-	useEffect(()=>{
+	useEffect(() => {
 		const fetchData = async() => {
-			const find_result = await axios.get(`/search/movie?&language=en-US&page=${page}&include_adult=false&query={value}`);
-			setFind(find_result.data);
-			console.log("Find:",find_result.data);
+			const result_find = await axios.get(`search/multi?&language=en-US&page=${page}&include_adult=false&query=${searchTerm}`);
+			setQuery(result_find.data.results);
+			console.log("Result Find Data Movie:",result_find.data.results);
 		}
 		fetchData();
-	}, [searchTerm]);
+	},[searchTerm]);
 
-	const onChange  = e => {
+	const onChange = (e) => {
 		setSearchTerm(e.target.value);
-		console.log("SearchMovies:",e.target.value);
-	};
-	const onSubmit = () => {
+		console.log("Input",e.target.value);
+	}
+
+	const onSubmit =()=> {
 		if (searchTerm.trim() === "") {
 			return;
-			console.log("Khong co ky tu duoc nhap");
+			alert("Khong duoc de trong",searchTerm);
 		}
 		setSearchTerm("");
 	};
@@ -51,7 +51,7 @@ function SearchView() {
 					<input className="box-search" 
 					placeholder="Movie Searching.." 
 					onChange={onChange}
-					onSubmit={onSubmit}
+					onSubmit ={onSubmit}
 					value={searchTerm}
 					/>
 				</div>
