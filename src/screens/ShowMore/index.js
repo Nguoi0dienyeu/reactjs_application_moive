@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
-import Navigations from 'components/Navigations/header.js';
-import Footer from 'components/Footer/';
 import { makeStyles } from '@material-ui/core/styles';
 import Pagination from '@material-ui/lab/Pagination';
+import { Spin } from 'antd';
+import axios from 'axios';
+import Footer from 'components/Footer/';
+import Navigations from 'components/Navigations/header.js';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 // css paginations
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-export default function ShowMore() {
+export default function ShowMore(props) {
+  const {loading} = props;
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
   const [totalpage, setTotalpage] = useState();
@@ -24,7 +26,6 @@ export default function ShowMore() {
       const list = await axios.get('/movie/now_playing?');
       setData(list.data.results);
       setTotalpage(list.data.total_pages);
-      console.log('List Data:', list.data);
     };
     fetchData();
   }, []);
@@ -41,6 +42,7 @@ export default function ShowMore() {
     fetchData();
   }, [page]);
   return (
+    <Spin spinning={loading}>
     <div className="App">
       <div className="container-flud">
         <Navigations />
@@ -80,5 +82,6 @@ export default function ShowMore() {
       </div>
       <Footer />
     </div>
+    </Spin>
   );
 }

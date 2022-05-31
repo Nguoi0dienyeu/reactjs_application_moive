@@ -4,6 +4,7 @@ import { BrowserRouter as Router, useParams } from 'react-router-dom';
 import DetailTitle from 'components/DetailTitle';
 import Navigations from 'components/Navigations/header.js';
 import Footer from 'components/Footer';
+import { Spin } from 'antd';
 
 export default function Details() {
 	const [data, setData] = useState([]);
@@ -38,6 +39,7 @@ export default function Details() {
 	);
 
 	return (
+		<Spin spinning>
 		<div className="App">
 			<div className="container-flud">
 				<Navigations />
@@ -55,7 +57,7 @@ export default function Details() {
 					</div>
 				</div>
 			</div>
-			<Footer />
 		</div>
+		</Spin>
 	);
 }
