@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { Spin } from 'antd';
 import axios from 'axios';
-import { BrowserRouter as Router, useParams } from 'react-router-dom';
 import DetailTitle from 'components/DetailTitle';
 import Navigations from 'components/Navigations/header.js';
-import Footer from 'components/Footer';
-import { Spin } from 'antd';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 export default function Details() {
 	const [data, setData] = useState([]);

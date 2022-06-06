@@ -53,7 +53,7 @@ export default function ShowMore(props) {
             <div className="content-film">
               {data.map((items, index) => (
                 <div className="film" key={index}>
-                  <Link to={`/detail/${items.id}`}>
+                  <Link to={`/movie/${items.id}`}>
                     <img
                       src={`https://www.themoviedb.org/t/p/w440_and_h660_face/${items.poster_path}`}
                       alt="film update"
@@ -61,7 +61,7 @@ export default function ShowMore(props) {
                   </Link>
                   <div className="sub-title">
                     <p>
-                      <Link to={`/detail/${items.id}`}>{items.title}</Link>
+                      <Link to={`/movie/${items.id}`}>{items.title}</Link>
                     </p>
                     <p className="date">
                       {new Date(items.release_date).getUTCFullYear()}

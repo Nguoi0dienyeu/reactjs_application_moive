@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import {BrowserRouter as Router,Link} from 'react-router-dom';
-import Navigations from 'components/Navigations/header.js';
-import Footer from 'components/Footer/';
 import { makeStyles } from '@material-ui/core/styles';
 import Pagination from '@material-ui/lab/Pagination';
+import axios from 'axios';
+import Footer from 'components/Footer/';
+import Navigations from 'components/Navigations/header.js';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
 	root: {
 		'& > * + *': {
@@ -50,7 +50,7 @@ function ShowmoreTv() {
 							<div className="watch-tv">
 								{data.map((items, index) => (
 									<div className="row-tv" key={index}>
-										<Link to={`/detailtv/${items.id}`}>
+										<Link to={`/detail/${items.id}`}>
 										<img
 											className="img-tv"
 											src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${items.poster_path}`}
@@ -58,7 +58,7 @@ function ShowmoreTv() {
 										/>
 										</Link>
 										<p className="title">
-											<Link to={`/detailtv/${items.id}`}>{items.name}</Link>
+											<Link to={`/detail/${items.id}`}>{items.name}</Link>
 										</p>
 										<p clas="title2">
 											{new Date(items.first_air_date).getFullYear()}
