@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import {BrowserRouter as Router,Link} from 'react-router-dom';
-import Navigations from 'components/Navigations/header.js';
-import Footer from 'components/Footer/';
 import { makeStyles } from '@material-ui/core/styles';
 import Pagination from '@material-ui/lab/Pagination';
+import axios from 'axios';
+import Footer from 'components/Footer/';
+import Navigations from 'components/Navigations/header.js';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 const useStyles = makeStyles((theme) => ({
 	root: {
 		'& > * + *': {
